@@ -347,25 +347,27 @@
       background: #ffffff;
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 20px 28px;
-      margin-top: 0; margin-bottom: 12px;
+      padding: 18px 24px;
+      margin-top: 0;
+      margin-bottom: 16px;
       position: relative;
       z-index: 20;
       box-shadow: var(--shadow-sm);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .trust-ribbon-text {
-      flex: 0 1 auto;
-      min-width: 260px;
+      flex: 1 1 300px;
+      min-width: 240px;
     }
 
     .trust-ribbon-text h3 {
-      font-size: 17px;
-      font-weight: 800;
+      font-size: 16.5px;
+      font-weight: 700;
       color: var(--brand-forest);
       margin-bottom: 4px;
       display: flex;
@@ -381,17 +383,17 @@
 
     .partner-logos-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
       align-items: center;
       gap: 12px;
-      flex: 1 1 auto;
-      max-width: 620px;
+      flex: 1 1 570px;
+      max-width: 100%;
     }
 
     .partner-logo-pill {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
       padding: 8px 14px;
       height: 48px;
       border-radius: var(--radius-md);
@@ -401,6 +403,7 @@
       transition: all 0.25s ease;
       box-sizing: border-box;
       white-space: nowrap;
+      min-width: 0;
     }
 
     .partner-logo-pill:hover {
@@ -424,60 +427,38 @@
     }
 
     .partner-logo-img {
-      height: 24px;
+      height: 22px;
       width: auto;
-      max-width: 58px;
+      max-width: 44px;
       object-fit: contain;
       display: block;
       flex-shrink: 0;
     }
 
     .partner-logo-img.medplus-logo {
-      height: 18px;
-      border-radius: 3px;
+      height: 16px;
+      max-width: 40px;
+      border-radius: 2px;
     }
 
     .partner-logo-img.amazon-logo {
-      height: 18px;
-      max-width: 65px;
-    }
-
-    .partner-badge-icon {
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 14px;
-      border-radius: 4px;
-    }
-
-    .partner-logo-pill.apollo .partner-badge-icon {
-      background: var(--partner-apollo);
-      color: #ffffff;
-    }
-
-    .partner-logo-pill.medplus .partner-badge-icon {
-      background: var(--partner-medplus);
-      color: #ffffff;
-    }
-
-    .partner-logo-pill.amazon .partner-badge-icon {
-      background: #111827;
-      color: #fbbf24;
+      height: 16px;
+      max-width: 50px;
     }
 
     .partner-text-block {
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
     }
 
     .partner-name {
-      font-size: 13.5px;
-      font-weight: 800;
+      font-size: 12.5px;
+      font-weight: 700;
       color: var(--text-main);
       line-height: 1.2;
+      white-space: nowrap;
     }
 
     .partner-subtext {
