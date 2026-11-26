@@ -393,9 +393,9 @@
     .partner-logo-pill {
       display: flex;
       align-items: center;
-      gap: 9px;
-      padding: 8px 14px;
-      height: 48px;
+      gap: 12px;
+      padding: 8px 16px;
+      height: 52px;
       border-radius: var(--radius-md);
       border: 1px solid #e2e8f0;
       background: #ffffff;
@@ -427,23 +427,30 @@
     }
 
     .partner-logo-img {
-      height: 22px;
+      height: 32px;
       width: auto;
-      max-width: 44px;
+      max-width: 50px;
       object-fit: contain;
       display: block;
       flex-shrink: 0;
     }
 
+    .partner-logo-img.apollo-logo {
+      height: 32px;
+      max-width: 48px;
+      mix-blend-mode: multiply;
+    }
+
     .partner-logo-img.medplus-logo {
-      height: 16px;
-      max-width: 40px;
-      border-radius: 2px;
+      height: 24px;
+      max-width: 65px;
+      border-radius: 3px;
     }
 
     .partner-logo-img.amazon-logo {
-      height: 16px;
-      max-width: 50px;
+      height: 18px;
+      max-width: 58px;
+      mix-blend-mode: multiply;
     }
 
     .partner-text-block {
