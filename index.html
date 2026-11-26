@@ -423,6 +423,25 @@
       background: var(--partner-amazon-bg);
     }
 
+    .partner-logo-img {
+      height: 24px;
+      width: auto;
+      max-width: 58px;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .partner-logo-img.medplus-logo {
+      height: 18px;
+      border-radius: 3px;
+    }
+
+    .partner-logo-img.amazon-logo {
+      height: 18px;
+      max-width: 65px;
+    }
+
     .partner-badge-icon {
       width: 24px;
       height: 24px;
@@ -2738,7 +2757,7 @@
       <div class="partner-logos-row">
         <!-- Apollo Pharmacy -->
         <a href="#filter-apollo" class="partner-logo-pill apollo" onclick="setFilter('apollo')">
-          <div style="width:36px; height:32px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:4px; padding:2px;"><img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" style="max-height:100%; max-width:100%; object-fit:contain;"></div>
+          <img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="partner-logo-img apollo-logo">
           <div class="partner-text-block">
             <span class="partner-name">Apollo Pharmacy</span>
           </div>
@@ -2746,7 +2765,7 @@
 
         <!-- MedPlus -->
         <a href="#filter-medplus" class="partner-logo-pill medplus" onclick="setFilter('medplus')">
-          <div style="width:36px; height:32px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:4px; padding:2px;"><img src="medplus_logo.jpg" alt="MedPlus Mart" style="max-height:100%; max-width:100%; object-fit:contain; border-radius:2px;"></div>
+          <img src="medplus_logo.jpg" alt="MedPlus Mart" class="partner-logo-img medplus-logo">
           <div class="partner-text-block">
             <span class="partner-name">MedPlus Mart</span>
           </div>
@@ -2754,7 +2773,7 @@
 
         <!-- Amazon India -->
         <a href="#filter-amazon" class="partner-logo-pill amazon" onclick="setFilter('amazon')">
-          <div style="width:36px; height:32px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:4px; padding:2px;"><img src="Amazon_logo.svg" alt="Amazon" style="max-height:100%; max-width:100%; object-fit:contain;"></div>
+          <img src="Amazon_logo.svg" alt="Amazon" class="partner-logo-img amazon-logo">
           <div class="partner-text-block">
             <span class="partner-name">Amazon India</span>
           </div>
