@@ -867,10 +867,11 @@
     }
 
     .btn-retailer-chip {
-      flex: 1;
-      min-width: 78px;
-      padding: 6px 10px;
-      border-radius: 6px;
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 5px 6px;
+      height: 34px;
+      border-radius: 7px;
       font-size: 11.5px;
       font-weight: 700;
       text-decoration: none;
@@ -878,107 +879,91 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      border: 1px solid transparent;
-      transition: all 0.2s ease;
+      gap: 5px;
+      border: 1.5px solid transparent;
+      transition: all 0.22s ease;
       white-space: nowrap;
+      box-sizing: border-box;
     }
 
     .btn-retailer-chip img.chip-logo {
-      height: 15px;
+      height: 20px;
       width: auto;
-      max-width: 24px;
+      max-width: 45px;
       object-fit: contain;
-      border-radius: 2px;
-      display: inline-block;
-      vertical-align: middle;
+      display: block;
       flex-shrink: 0;
     }
 
-    .btn-retailer-chip.amazon {
-      padding: 4px 12px;
-      height: 28px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .btn-retailer-chip .chip-brand-name {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1;
     }
 
-    .btn-retailer-chip.amazon img.chip-logo {
-      height: 15px;
-      width: auto;
-      max-width: 58px;
-      object-fit: contain;
-      display: block;
-      transition: filter 0.2s ease;
-    }
-
-    .btn-retailer-chip.amazon:hover img.chip-logo {
-      filter: brightness(0) invert(1);
-    }
-
+    /* Apollo Chip */
     .btn-retailer-chip.apollo {
       background: #e6f6f4;
-      border-color: #99f6e4;
-      padding: 4px 10px;
-      height: 28px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      border-color: #a7f3d0;
+      color: #027668;
     }
-
+    .btn-retailer-chip.apollo img.chip-logo {
+      height: 22px;
+      max-width: 32px;
+    }
     .btn-retailer-chip.apollo:hover {
       background: #027668;
       border-color: #027668;
+      color: #ffffff;
     }
-
-    .btn-retailer-chip.apollo img.chip-logo {
-      height: 16px;
-      width: auto;
-      max-width: 48px;
-      object-fit: contain;
-      display: block;
-      transition: filter 0.2s ease;
-    }
-
     .btn-retailer-chip.apollo:hover img.chip-logo {
       filter: brightness(0) invert(1);
     }
+    .btn-retailer-chip.apollo:hover .chip-brand-name {
+      color: #ffffff;
+    }
 
+    /* MedPlus Chip */
     .btn-retailer-chip.medplus {
       background: #fde8e8;
       border-color: #fecaca;
-      padding: 4px 10px;
-      height: 28px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      color: #e53935;
     }
-
+    .btn-retailer-chip.medplus img.chip-logo {
+      height: 17px;
+      max-width: 44px;
+      border-radius: 2px;
+    }
     .btn-retailer-chip.medplus:hover {
       background: #e53935;
       border-color: #e53935;
+      color: #ffffff;
+    }
+    .btn-retailer-chip.medplus:hover .chip-brand-name {
+      color: #ffffff;
     }
 
-    .btn-retailer-chip.medplus img.chip-logo {
-      height: 16px;
-      width: auto;
-      max-width: 52px;
-      border-radius: 2px;
-      object-fit: contain;
-      display: block;
-      transition: filter 0.2s ease;
-    }
-
+    /* Amazon Chip */
     .btn-retailer-chip.amazon {
       background: #fffbeb;
-      color: #92400e;
-      border-color: #fde68a;
+      border-color: #fed7aa;
+      color: #1f2937;
     }
-
+    .btn-retailer-chip.amazon img.chip-logo {
+      height: 14px;
+      max-width: 44px;
+    }
     .btn-retailer-chip.amazon:hover {
       background: #111827;
-      color: #fbbf24;
       border-color: #111827;
+      color: #fbbf24;
+    }
+    .btn-retailer-chip.amazon:hover img.chip-logo {
+      filter: brightness(0) invert(1);
+    }
+    .btn-retailer-chip.amazon:hover .chip-brand-name {
+      color: #fbbf24;
     }
 
     .btn-retailer-chip.direct-only {
@@ -2850,7 +2835,10 @@
                   <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(2305)">Delivery Options ▾</button>
                 </div>
                 <div class="retail-buttons-group">
-                  <a href="https://www.amazon.in/dp/B0HMWXMLBF" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip amazon" title="Buy on Amazon" aria-label="Buy on Amazon"><img src="Amazon_logo.svg" alt="Amazon" class="chip-logo"></a>
+                  <a href="https://www.amazon.in/dp/B0HMWXMLBF" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip amazon" title="Buy on Amazon" aria-label="Buy on Amazon">
+                    <img src="Amazon_logo.svg" alt="Amazon" class="chip-logo amazon-chip-logo">
+                    <span class="chip-brand-name">Amazon</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2898,9 +2886,18 @@
                   <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(736)">Options ▾</button>
                 </div>
                 <div class="retail-buttons-group">
-                  <a href="https://www.medplusmart.com/product/relx-oil-roll-on-8ml_relx0001" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip medplus" title="Buy on MedPlus Mart" aria-label="Buy on MedPlus Mart"><img src="medplus_logo.jpg" alt="MedPlus Mart" class="chip-logo"></a>
-                  <a href="https://www.apollopharmacy.in/otc/relx-oil-rollon-8ml" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip apollo" title="Buy on Apollo Pharmacy" aria-label="Buy on Apollo Pharmacy"><img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="chip-logo"></a>
-                  <a href="https://www.amazon.in/dp/B0HL592Z79" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip amazon" title="Buy on Amazon" aria-label="Buy on Amazon"><img src="Amazon_logo.svg" alt="Amazon" class="chip-logo"></a>
+                  <a href="https://www.medplusmart.com/product/relx-oil-roll-on-8ml_relx0001" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip medplus" title="Buy on MedPlus Mart" aria-label="Buy on MedPlus Mart">
+                    <img src="medplus_logo.jpg" alt="MedPlus Mart" class="chip-logo medplus-chip-logo">
+                    <span class="chip-brand-name">MedPlus</span>
+                  </a>
+                  <a href="https://www.apollopharmacy.in/otc/relx-oil-rollon-8ml" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip apollo" title="Buy on Apollo Pharmacy" aria-label="Buy on Apollo Pharmacy">
+                    <img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="chip-logo apollo-chip-logo">
+                    <span class="chip-brand-name">Apollo</span>
+                  </a>
+                  <a href="https://www.amazon.in/dp/B0HL592Z79" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip amazon" title="Buy on Amazon" aria-label="Buy on Amazon">
+                    <img src="Amazon_logo.svg" alt="Amazon" class="chip-logo amazon-chip-logo">
+                    <span class="chip-brand-name">Amazon</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2943,8 +2940,14 @@
                   <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(2267)">Details ▾</button>
                 </div>
                 <div class="retail-buttons-group">
-                  <a href="https://www.apollopharmacy.in/otc/sleep-8-pain-relief-balm-50g" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip apollo" title="Buy on Apollo Pharmacy" aria-label="Buy on Apollo Pharmacy"><img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="chip-logo"></a>
-                  <a href="https://www.medplusmart.com/product/sleep-8-pain-relief-balm-50gm_slee0027" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip medplus" title="Buy on MedPlus Mart" aria-label="Buy on MedPlus Mart"><img src="medplus_logo.jpg" alt="MedPlus Mart" class="chip-logo"></a>
+                  <a href="https://www.apollopharmacy.in/otc/sleep-8-pain-relief-balm-50g" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip apollo" title="Buy on Apollo Pharmacy" aria-label="Buy on Apollo Pharmacy">
+                    <img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="chip-logo apollo-chip-logo">
+                    <span class="chip-brand-name">Apollo</span>
+                  </a>
+                  <a href="https://www.medplusmart.com/product/sleep-8-pain-relief-balm-50gm_slee0027" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip medplus" title="Buy on MedPlus Mart" aria-label="Buy on MedPlus Mart">
+                    <img src="medplus_logo.jpg" alt="MedPlus Mart" class="chip-logo medplus-chip-logo">
+                    <span class="chip-brand-name">MedPlus</span>
+                  </a>
                 </div>
               </div>
             </div>
