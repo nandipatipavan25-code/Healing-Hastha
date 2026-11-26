@@ -494,135 +494,207 @@
       transform: translateY(-2px);
     }
 
-    .btn-pdp-buynow {
-      width: 100%;
-      background: var(--brand-forest);
-      color: #ffffff;
-      border: none;
-      padding: 14px;
-      border-radius: var(--radius-md);
-      font-size: 15px;
-      font-weight: 800;
-      cursor: pointer;
+    /* Primary "Buy on" Retail Partners Box */
+    .pdp-partner-priority-box {
+      background: #fcfbf9;
+      border: 1.5px solid #e7e5e4;
+      border-radius: 14px;
+      padding: 18px 20px 20px;
       margin-bottom: 24px;
-      display: block;
-      text-align: center;
+      box-shadow: 0 2px 12px rgba(27,77,62,0.04);
+      box-sizing: border-box;
+    }
+
+    .partner-priority-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .partner-priority-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #1c1917;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .partner-priority-badge {
+      background: #e8f5e9;
+      color: #1b4d3e;
+      border: 1px solid #bbf7d0;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 9999px;
+    }
+
+    .partner-priority-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .btn-partner-buy {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 8px;
       text-decoration: none;
-      box-shadow: 0 4px 14px rgba(27, 77, 62, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      min-height: 76px;
+      text-align: center;
+      box-sizing: border-box;
     }
 
-    .btn-pdp-buynow:hover {
-      background: var(--brand-forest-dark);
+    .btn-partner-buy:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
 
-    /* Omnichannel Partner Buy Box on PDP */
-    .partner-card-logo {
-      width: 40px;
-      height: 36px;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
+    .partner-buy-top {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      gap: 5px;
+      width: 100%;
+      min-height: 28px;
     }
 
-    .partner-brand-logo-img {
-      max-width: 100%;
-      max-height: 100%;
+    .buy-on-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1c1917;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .partner-buy-logo {
       object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      transition: transform 0.2s ease;
     }
 
-    .pdp-partner-box {
-      background: #fafaf9;
-      border: 1px solid #e7e5e4;
-      border-radius: var(--radius-md);
-      padding: 18px;
-      margin-bottom: 24px;
+    .partner-buy-logo.amazon-logo {
+      height: 18px;
+      max-width: 68px;
+      margin-top: 2px;
     }
 
-    .partner-box-header {
+    .partner-buy-logo.medplus-logo {
+      height: 19px;
+      max-width: 72px;
+      border-radius: 3px;
+    }
+
+    .partner-buy-logo.apollo-logo {
+      height: 26px;
+      max-width: 42px;
+    }
+
+    .apollo-name-tag {
+      font-size: 13px;
+      font-weight: 800;
+      color: #027668;
+      letter-spacing: -0.01em;
+    }
+
+    .partner-delivery-note {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #64748b;
+      line-height: 1.2;
+    }
+
+    /* Brand accents */
+    .btn-partner-buy.amazon {
+      border-color: #fed7aa;
+    }
+    .btn-partner-buy.amazon:hover {
+      border-color: #f59e0b;
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.16);
+    }
+
+    .btn-partner-buy.medplus {
+      border-color: #fecaca;
+    }
+    .btn-partner-buy.medplus:hover {
+      border-color: #e53935;
+      box-shadow: 0 6px 16px rgba(229, 57, 53, 0.16);
+    }
+
+    .btn-partner-buy.apollo {
+      border-color: #a7f3d0;
+    }
+    .btn-partner-buy.apollo:hover {
+      border-color: #027668;
+      box-shadow: 0 6px 16px rgba(2, 118, 104, 0.16);
+    }
+
+    /* Secondary direct dispensary order wrap */
+    .pdp-direct-order-wrap {
+      border-top: 1px dashed #e2e8f0;
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+
+    .direct-order-subhead {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 12px;
     }
 
-    .partner-box-title {
-      font-size: 12px;
+    .direct-order-title {
+      font-size: 11.5px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: #44403c;
+      color: #64748b;
     }
 
-    .partner-box-badge {
-      background: #e2e8f0;
-      color: #475569;
-      font-size: 10.5px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
+    .direct-order-badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1b4d3e;
     }
 
-        .partner-grid-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-      gap: 12px;
-    }
-
-    .partner-buy-card {
-      border: 1.5px solid #e2e8f0;
-      background: #ffffff;
-      border-radius: var(--radius-md, 10px);
-      padding: 10px 14px;
-      height: 48px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    }
-
-    .partner-buy-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-    }
-
-    .partner-buy-card.apollo:hover {
-      border-color: #027668;
-    }
-
-    .partner-buy-card.medplus:hover {
-      border-color: #e53935;
-    }
-
-    .partner-buy-card.amazon:hover {
-      border-color: #f59e0b;
-    }
-
-    .partner-card-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .btn-pdp-buynow-direct {
       width: 100%;
-      height: 100%;
+      background: #ffffff;
+      color: #1b4d3e;
+      border: 1.5px solid #1b4d3e;
+      padding: 11px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+      margin-top: 10px;
     }
 
-    .partner-brand-logo-img {
-      max-width: 100%;
-      max-height: 32px;
-      object-fit: contain;
-      display: block;
-      transition: transform 0.2s ease;
-    }
-
-    .partner-buy-card:hover .partner-brand-logo-img {
-      transform: scale(1.05);
+    .btn-pdp-buynow-direct:hover {
+      background: #f0fdf4;
+      color: #153c30;
+      border-color: #153c30;
     }
 
     .partner-card-icon {
@@ -2314,18 +2386,25 @@
       }
 
       /* Partner Cards on Mobile */
-      .partner-grid-options {
+      .partner-priority-grid {
         grid-template-columns: 1fr;
         gap: 8px;
       }
 
-      .pdp-partner-box {
-        padding: 14px 12px;
-        margin-bottom: 20px;
+      .btn-partner-buy {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 16px;
+        min-height: 50px;
       }
 
-      .partner-buy-card {
-        padding: 10px 12px;
+      .partner-buy-top {
+        justify-content: flex-start;
+        width: auto;
+      }
+
+      .partner-delivery-note {
+        text-align: right;
       }
 
       /* Sticky Mobile Buy Bar */
@@ -2976,42 +3055,67 @@
               </div>
             </div>
           </div>
-          <!-- Direct Add to Cart Action -->
-          <div class="pdp-direct-actions">
-            <div class="qty-picker">
-              <button type="button" class="qty-btn" onclick="adjustQty(-1)">&minus;</button>
-              <input type="text" class="qty-input" id="pdpQtyInput" value="1" readonly>
-              <button type="button" class="qty-btn" onclick="adjustQty(1)">&plus;</button>
+          <!-- Priority "Buy on" Retail Partners (Top Priority) -->
+          <div class="pdp-partner-priority-box">
+            <div class="partner-priority-header">
+              <span class="partner-priority-title">Buy on Trusted Stores &amp; Online:</span>
+              <span class="partner-priority-badge">📍 Hyderabad Stores &amp; Pan-India</span>
             </div>
-            <button type="button" class="btn-add-pdp-cart" onclick="addPdpToCart()">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              Add to Basket (Direct ₹<span id="btnPriceDisplay">99</span>)
-            </button>
-          </div>
+            <div class="partner-priority-grid">
+              <!-- Buy on Amazon -->
+              <a href="https://www.amazon.in/dp/B0HL592Z79" target="_blank" rel="noopener" class="btn-partner-buy amazon" title="Buy on Amazon India">
+                <div class="partner-buy-top">
+                  <span class="buy-on-label">Buy on</span>
+                  <img src="Amazon_logo.svg" alt="Amazon India" class="partner-buy-logo amazon-logo">
+                </div>
+                <div class="partner-delivery-note">Pan-India Fast Delivery</div>
+              </a>
 
-          <a href="https://healinghastha.com/cart/" class="btn-pdp-buynow">
-            ⚡ Buy Now — Cash on Delivery / UPI Available
-          </a>
+              <!-- Buy on MedPlus -->
+              <a href="https://www.medplusmart.com/product/relx-oil-roll-on-8ml_relx0001" target="_blank" rel="noopener" class="btn-partner-buy medplus" title="Buy on MedPlus Mart">
+                <div class="partner-buy-top">
+                  <span class="buy-on-label">Buy on</span>
+                  <img src="medplus_logo.jpg" alt="MedPlus Mart" class="partner-buy-logo medplus-logo">
+                </div>
+                <div class="partner-delivery-note">Hyderabad Outlets &amp; Online</div>
+              </a>
 
-          <!-- Omnichannel Partner Strip -->
-          
-        <div class="pdp-partner-box">
-          <div class="partner-box-header">
-            <span class="partner-box-title">Also Available At Trusted Partners:</span>
-            <span class="partner-box-badge" style="background:#e8f5e9; color:#1b4d3e; border:1px solid #bbf7d0; font-size:10.5px; font-weight:700;">📍 Currently Available in Hyderabad Stores</span>
+              <!-- Buy on Apollo -->
+              <a href="https://www.apollopharmacy.in/otc/relx-oil-rollon-8ml" target="_blank" rel="noopener" class="btn-partner-buy apollo" title="Buy on Apollo Pharmacy">
+                <div class="partner-buy-top">
+                  <span class="buy-on-label">Buy on</span>
+                  <img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="partner-buy-logo apollo-logo">
+                  <span class="apollo-name-tag">Apollo</span>
+                </div>
+                <div class="partner-delivery-note">2-Hr Express / Stores</div>
+              </a>
+            </div>
+
+            <!-- Direct AYUSH Order Section (Secondary to Retail Partners) -->
+            <div class="pdp-direct-order-wrap">
+              <div class="direct-order-subhead">
+                <span class="direct-order-title">Or Order Direct from AYUSH Dispensary:</span>
+                <span class="direct-order-badge">Fresh Batch • Direct Dispatch</span>
+              </div>
+              
+              <div class="pdp-direct-actions">
+                <div class="qty-picker">
+                  <button type="button" class="qty-btn" onclick="adjustQty(-1)">&minus;</button>
+                  <input type="text" class="qty-input" id="pdpQtyInput" value="1" readonly>
+                  <button type="button" class="qty-btn" onclick="adjustQty(1)">&plus;</button>
+                </div>
+                <button type="button" class="btn-add-pdp-cart" onclick="addPdpToCart()">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  Add to Basket (Direct ₹<span id="btnPriceDisplay">99</span>)
+                </button>
+              </div>
+
+              <a href="https://healinghastha.com/cart/" class="btn-pdp-buynow-direct">
+                <span>⚡ Direct Online Checkout (Cash on Delivery / UPI Available)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="partner-grid-options">
-            <a href="https://www.medplusmart.com/product/relx-oil-roll-on-8ml_relx0001" target="_blank" rel="noopener" class="partner-buy-card medplus" aria-label="Buy on MedPlus Mart" title="Buy on MedPlus Mart">
-              <img src="medplus_logo.jpg" alt="MedPlus Mart Logo" class="partner-brand-logo-img">
-            </a>
-            <a href="https://www.apollopharmacy.in/otc/relx-oil-rollon-8ml" target="_blank" rel="noopener" class="partner-buy-card apollo" aria-label="Buy on Apollo Pharmacy" title="Buy on Apollo Pharmacy">
-              <img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy Logo" class="partner-brand-logo-img">
-            </a>
-            <a href="https://www.amazon.in/dp/B0HL592Z79" target="_blank" rel="noopener" class="partner-buy-card amazon" aria-label="Buy on Amazon India" title="Buy on Amazon India">
-              <img src="Amazon_logo.svg" alt="Amazon Logo" class="partner-brand-logo-img">
-            </a>
-          </div>
-        </div>
 
                     <!-- Doctor / Founder Clinical Authority Card -->
           <div class="pdp-founder-mini-badge" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 18px; margin:18px 0; box-shadow:0 3px 12px rgba(27,77,62,0.05); text-align:left;">
