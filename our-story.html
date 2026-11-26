@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | Healing Hastha - 23 Years of Ayurvedic Wisdom</title>
+  <meta name="description" content="Discover the journey of Healing Hastha and our commitment to pure Ayurveda. Founded by Dr. B. Masthan Yadav, bringing 23 years of clinical healing.">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Manrope (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --brand-forest: #1b4d3e;
+      --brand-forest-dark: #0f3329;
+      --brand-forest-light: #e8f0ec;
+      --brand-terracotta: #c06c52;
+      --brand-terracotta-dark: #a8563d;
+      --brand-cream: #fdfaf6;
+      --brand-cream-card: #f9f5ef;
+      --brand-mint: #e8f5f0;
+      --brand-peach: #fdf0eb;
+      --brand-lavender: #f0eef8;
+      
+      --text-main: #23201d;
+      --text-body: #475569;
+      --text-muted: #64748b;
+      --border-subtle: #ebdcd0;
+      --border-light: #e2e8f0;
+
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --shadow-soft: 0 4px 20px rgba(0,0,0,0.04);
+      --shadow-hover: 0 10px 30px rgba(27,77,62,0.08);
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-main);
+      background-color: var(--brand-cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container Utility */
+    .hh-container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Announcement Bar */
+    .announcement-bar {
+      background: var(--brand-forest-dark);
+      color: #e2e8f0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 8px 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .announcement-bar span {
+      color: #fed7aa;
+    }
+
+    /* Header Navigation */
+    .site-header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--brand-forest);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: var(--brand-terracotta);
+      border-radius: 2px;
+    }
+
+    .header-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-consult-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand-forest);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+    }
+    .btn-consult-header:hover {
+      background: var(--brand-forest-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ================= OUR STORY PAGE MAIN ================= */
+    .our-story-page {
+      padding-top: 48px;
+      padding-bottom: 72px;
+    }
+
+    /* Breadcrumb */
+    .story-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .story-breadcrumb a {
+      color: var(--brand-forest);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* 1. Page Header Block */
+    .our-story-page__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .our-story-page__title {
+      font-family: var(--font-heading);
+      font-size: clamp(34px, 4.5vw, 44px);
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .our-story-page__description {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    /* 2. Welcome Section */
+    .our-story-page__welcome {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 44px 40px;
+      margin-bottom: 56px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-light);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .our-story-page__welcome-badge {
+      display: inline-block;
+      background: rgba(192, 108, 82, 0.1);
+      color: var(--brand-terracotta);
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+    }
+
+    .our-story-page__welcome-title {
+      font-family: var(--font-heading);
+      font-size: clamp(23px, 3.2vw, 30px);
+      line-height: 1.35;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .our-story-page__welcome-divider {
+      width: 52px;
+      height: 3px;
+      background: var(--brand-terracotta);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .our-story-page__welcome-text {
+      font-size: 15.5px;
+      line-height: 1.72;
+      color: var(--text-body);
+    }
+
+    .our-story-page__welcome-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .our-story-page__welcome-image-inner img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px rgba(27,77,62,0.12);
+      display: block;
+      object-fit: cover;
+    }
+
+    /* 3. Philosophy Section */
+    .our-story-page__philosophy {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      margin-bottom: 56px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-light);
+    }
+
+    .our-story-page__section-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .our-story-page__section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(26px, 3.5vw, 34px);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .our-story-page__section-subtitle {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-terracotta);
+    }
+
+    .our-story-page__philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .our-story-page__philosophy-item {
+      background: var(--brand-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .our-story-page__philosophy-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .our-story-page__philosophy-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 14px auto;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-forest);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .our-story-page__philosophy-name {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 6px;
+    }
+
+    .our-story-page__philosophy-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    /* Details Grid (Heritage & Rigor) */
+    .our-story-page__details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .our-story-page__details-card {
+      background: #fafaf9;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px 22px;
+    }
+
+    .our-story-page__details-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .our-story-page__details-accent {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-terracotta);
+      display: inline-block;
+    }
+
+    .our-story-page__details-text {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--text-body);
+    }
+
+    /* Highlighted Dark Card Quote */
+    .our-story-page__quote-card {
+      background: linear-gradient(135deg, var(--brand-forest-dark) 0%, var(--brand-forest) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .our-story-page__quote-text {
+      font-family: var(--font-heading);
+      font-size: clamp(17px, 2.2vw, 21px);
+      line-height: 1.55;
+      font-style: italic;
+      color: #f8fafc;
+    }
+
+    .our-story-page__quote-icon {
+      color: rgba(255, 255, 255, 0.4);
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+    }
+
+    /* 4. Glance Section */
+    .our-story-page__glance {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      margin-bottom: 56px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-light);
+    }
+
+    .our-story-page__glance-scroll {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .our-story-page__glance-card {
+      background: var(--brand-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+    .our-story-page__glance-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .our-story-page__glance-icon-wrap {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .bg-brand-mint { background: var(--brand-mint); color: #166534; }
+    .bg-brand-peach { background: var(--brand-peach); color: #c06c52; }
+    .bg-brand-lavender { background: var(--brand-lavender); color: #6b21a8; }
+
+    .our-story-page__glance-name {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 4px;
+    }
+
+    .our-story-page__glance-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--brand-terracotta);
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .our-story-page__glance-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-body);
+      flex-grow: 1;
+      margin-bottom: 14px;
+    }
+
+    .our-story-page__glance-footer {
+      border-top: 1px solid #f1f5f9;
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .our-story-page__glance-stat {
+      font-size: 12.5px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+    }
+    .our-story-page__glance-stat strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* 5. Meet the Founder Section */
+    .our-story-page__founder {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 52px 40px;
+      margin-bottom: 56px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-light);
+    }
+
+    .our-story-page__founder-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 3.8vw, 36px);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--brand-forest);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .our-story-page__founder-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 44px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+
+    .our-story-page__founder-photo-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px rgba(27,77,62,0.12);
+      display: block;
+      object-fit: cover;
+    }
+
+    .our-story-page__founder-name {
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 26px);
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 4px;
+    }
+
+    .our-story-page__founder-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--brand-terracotta);
+      margin-bottom: 14px;
+    }
+
+    .our-story-page__founder-bio {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 24px;
+    }
+
+    .our-story-page__accordions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .our-story-acc {
+      background: var(--brand-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+
+    .our-story-acc-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--brand-forest);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .our-story-acc-content {
+      color: var(--text-body);
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+    .our-story-acc-content ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .our-story-acc-content li {
+      margin-bottom: 6px;
+    }
+
+    /* Timeline */
+    .our-story-page__timeline-wrapper {
+      border-top: 1px solid var(--border-light);
+      padding-top: 36px;
+    }
+
+    .our-story-page__timeline-heading {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .our-story-page__timeline-desktop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .our-story-page__timeline-item {
+      background: var(--brand-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .our-story-page__timeline-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .our-story-page__timeline-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--brand-forest);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .our-story-page__timeline-text strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 17px;
+      color: var(--brand-forest);
+      margin-bottom: 4px;
+    }
+
+    .our-story-page__timeline-text span {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+
+    /* 6. Vision & Mission Section */
+    .our-story-page__vision-mission {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      margin-bottom: 56px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-light);
+    }
+
+    .our-story-page__vision-mission-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 3.8vw, 36px);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--brand-forest);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .our-story-page__vision-mission-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .our-story-page__vision,
+    .our-story-page__mission {
+      background: var(--brand-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .our-story-page__vision-icon,
+    .our-story-page__mission-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--brand-terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .our-story-page__vision-title,
+    .our-story-page__mission-title {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 12px;
+    }
+
+    .our-story-page__vision-text,
+    .our-story-page__mission-text {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--text-body);
+      margin-bottom: 12px;
+    }
+
+    .our-story-page__vision-quote {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-style: italic;
+      color: var(--brand-forest);
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* 7. Core Promises (4 Pillars) */
+    .our-story-page__promises {
+      margin-bottom: 56px;
+    }
+
+    .our-story-page__promises-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .our-story-page__promise-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+    }
+    .our-story-page__promise-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .our-story-page__promise-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--brand-mint);
+      color: var(--brand-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px auto;
+    }
+
+    .our-story-page__promise-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 6px;
+    }
+
+    .our-story-page__promise-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    /* 8. Legacy & Closing CTA */
+    .our-story-page__legacy {
+      background: linear-gradient(135deg, var(--brand-forest-dark) 0%, var(--brand-forest) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 56px 40px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .our-story-page__legacy-text {
+      font-size: clamp(16px, 2.2vw, 19px);
+      line-height: 1.75;
+      font-weight: 400;
+      max-width: 780px;
+      margin: 0 auto 30px auto;
+      color: #f1f5f9;
+    }
+
+    .our-story-page__legacy-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .our-story-page__btn-primary {
+      background: var(--brand-terracotta);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 13px 30px;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .our-story-page__btn-primary:hover {
+      background: var(--brand-terracotta-dark);
+      transform: translateY(-2px);
+    }
+
+    .our-story-page__btn-secondary {
+      background: transparent;
+      color: #ffffff;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .our-story-page__btn-secondary:hover {
+      border-color: #ffffff;
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ================= FOOTER ================= */
+    .site-footer {
+      background: var(--brand-forest-dark);
+      color: #94a3b8;
+      padding: 64px 0 32px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 60px;
+    }
+
+    .footer-grid-exact {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.3fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col-exact h4 {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .footer-links-list,
+    .footer-products-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links-list li,
+    .footer-products-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links-list a,
+    .footer-products-list a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: var(--transition);
+    }
+    .footer-links-list a:hover,
+    .footer-products-list a:hover {
+      color: #ffffff;
+      padding-left: 4px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .footer-social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-social-btn:hover {
+      background: var(--brand-terracotta);
+      transform: scale(1.08);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+    .footer-contact-item a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12.5px;
+      color: #64748b;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .our-story-page__welcome {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__founder-grid {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__glance-scroll {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .our-story-page__promises-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid-exact {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .our-story-page__philosophy-grid {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__details-grid {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__glance-scroll {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__timeline-desktop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .our-story-page__vision-mission-grid {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__promises-grid {
+        grid-template-columns: 1fr;
+      }
+      .our-story-page__quote-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-grid-exact {
+        grid-template-columns: 1fr;
+      }
+      .header-content {
+        height: 68px;
+      }
+      .nav-links {
+        display: none; /* simple mobile state */
+      }
+      .our-story-page__welcome {
+        padding: 28px 20px;
+      }
+      .our-story-page__philosophy,
+      .our-story-page__glance,
+      .our-story-page__founder,
+      .our-story-page__vision-mission,
+      .our-story-page__legacy {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    🌿 Free Delivery on all prepaid orders above ₹500 • <span>Authentic Classical Ayurveda direct from Valaja</span> • Certified AYUSH Facility
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="hh-container">
+      <div class="header-content">
+        <a href="index.html" class="brand-logo" aria-label="Healing Hastha Home">
+          <img src="https://healinghastha.com/wp-content/uploads/2025/06/Healing-Hastha-logo.png" alt="Healing Hastha Logo">
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#products">Products</a>
+          <a href="our-story.html" class="active">Our Story</a>
+          <a href="https://healinghastha.com/knowledge-hub">Knowledge Hub</a>
+          <a href="contact-us.html">Contact</a>
+        </nav>
+        <div class="header-cta-group">
+          <a href="contact-us.html" class="btn-consult-header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Consult Doctor</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="our-story-page">
+    <div class="hh-container">
+
+      <!-- Breadcrumb -->
+      <div class="story-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Our Story</span>
+      </div>
+
+      <!-- 1. Page Header Block -->
+      <div class="our-story-page__header">
+        <h1 class="our-story-page__title">Our Story</h1>
+        <p class="our-story-page__description">
+          20 Years of Nature. Now in Your Hands. Discover the journey of Healing Hastha and our commitment to pure Ayurveda.
+        </p>
+      </div>
+
+      <!-- 2. Welcome Block - The Invitation -->
+      <section class="our-story-page__welcome">
+        <div class="our-story-page__welcome-content">
+          <span class="our-story-page__welcome-badge">Welcome to the beginning of a healthier tomorrow</span>
+          <h2 class="our-story-page__welcome-title">At Healing Hastha Herbals, we exist to bring Active Herbal—the purest form of nature's wisdom.</h2>
+          <div class="our-story-page__welcome-divider"></div>
+          <p class="our-story-page__welcome-text">
+            We are not just a company; we are a bridge between ancient Ayurvedic texts and modern wellness needs. Every product we formulate begins with a simple question: How can nature heal this best? We take rare, potent herbs, process them according to classical Ayurvedic standards, and deliver them in convenient, modern formats—so you can experience genuine, unadulterated healing.
+          </p>
+        </div>
+        <div class="our-story-page__welcome-image-wrapper">
+          <div class="our-story-page__welcome-image-inner">
+            <img src="story-hero.png" alt="Herbal processing and classical formulation at Healing Hastha">
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Philosophy Indicators block -->
+      <section class="our-story-page__philosophy">
+        <div class="our-story-page__section-header">
+          <h2 class="our-story-page__section-title">Our Core Philosophy</h2>
+          <p class="our-story-page__section-subtitle">Nature meets Science</p>
+        </div>
+
+        <div class="our-story-page__philosophy-grid">
+          <div class="our-story-page__philosophy-item">
+            <div class="our-story-page__philosophy-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h4 class="our-story-page__philosophy-name">AYUSH Approved</h4>
+            <p class="our-story-page__philosophy-desc">Government-recognized manufacturing facility complying with strict Ayurvedic pharmacopoeia.</p>
+          </div>
+
+          <div class="our-story-page__philosophy-item">
+            <div class="our-story-page__philosophy-icon">
+              <i data-lucide="microscope"></i>
+            </div>
+            <h4 class="our-story-page__philosophy-name">GMP Certified</h4>
+            <p class="our-story-page__philosophy-desc">Quality tested and accredited from our very first batch, ensuring absolute botanical purity.</p>
+          </div>
+
+          <div class="our-story-page__philosophy-item">
+            <div class="our-story-page__philosophy-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h4 class="our-story-page__philosophy-name">Trademark Registered</h4>
+            <p class="our-story-page__philosophy-desc">Original proprietary formulations and authenticated heritage trademarks.</p>
+          </div>
+        </div>
+
+        <!-- Detail Cards Description -->
+        <div class="our-story-page__details-grid">
+          <div class="our-story-page__details-card">
+            <h4 class="our-story-page__details-title">
+              <span class="our-story-page__details-accent"></span>
+              Our Heritage
+            </h4>
+            <p class="our-story-page__details-text">
+              We research, trial, manufacture, market, and export international-quality herbal products. Our flagship, MY Dr PAIN RELIEF OIL, is born from 23 years of clinical observation and profound understanding of neuromuscular conditions.
+            </p>
+          </div>
+
+          <div class="our-story-page__details-card">
+            <h4 class="our-story-page__details-title">
+              <span class="our-story-page__details-accent"></span>
+              Our Rigor
+            </h4>
+            <p class="our-story-page__details-text">
+              All products are developed at our in-house R&D unit by eminent doctors and scientists. We refer to ancient herbal texts, identify indigenous herbs, and subject every formulation to modern pharmacological, toxicological, and safety tests.
+            </p>
+          </div>
+        </div>
+
+        <!-- Highlighted Dark Card Quote -->
+        <div class="our-story-page__quote-card">
+          <div class="our-story-page__quote-content">
+            <p class="our-story-page__quote-text">
+              "Our factory received GMP accreditation with its very first batch—a testament to our commitment to quality from day one."
+            </p>
+          </div>
+          <i data-lucide="microscope" class="our-story-page__quote-icon"></i>
+        </div>
+      </section>
+
+      <!-- 4. Healing Hastha at a Glance -->
+      <section class="our-story-page__glance">
+        <div class="our-story-page__section-header">
+          <h2 class="our-story-page__section-title">Healing Hastha at a Glance</h2>
+          <p class="our-story-page__section-subtitle">2010 – Present | Hyderabad | Global Vision</p>
+        </div>
+
+        <div class="our-story-page__glance-scroll">
+          <!-- Card 1 -->
+          <div class="our-story-page__glance-card">
+            <div class="our-story-page__glance-icon-wrap bg-brand-mint">
+              <i data-lucide="leaf"></i>
+            </div>
+            <h5 class="our-story-page__glance-name">Our Logo</h5>
+            <span class="our-story-page__glance-tag">Symbolism & Ethos</span>
+            <p class="our-story-page__glance-desc">Herbal leaf embracing human form – symbolizing nature protecting humanity. Represents our vision to encircle the world with herbal wellness.</p>
+            <div class="our-story-page__glance-footer">
+              <div class="our-story-page__glance-stat"><span>Founded</span><strong>2010 • Hyderabad</strong></div>
+              <div class="our-story-page__glance-stat"><span>Facility</span><strong>Bachupally</strong></div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="our-story-page__glance-card">
+            <div class="our-story-page__glance-icon-wrap bg-brand-peach">
+              <i data-lucide="grid"></i>
+            </div>
+            <h5 class="our-story-page__glance-name">Our Range</h5>
+            <span class="our-story-page__glance-tag">Diverse Solutions</span>
+            <div class="our-story-page__glance-desc">
+              <div>• Herbal Pharmaceutical</div>
+              <div>• Herbal Personal Care</div>
+              <div>• Single Herbs & Decocations</div>
+              <div>• Herbal Teas & Supplements</div>
+            </div>
+            <div class="our-story-page__glance-footer">
+              <div class="our-story-page__glance-stat"><span>Promise</span><strong>Honors herbal integrity</strong></div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="our-story-page__glance-card">
+            <div class="our-story-page__glance-icon-wrap bg-brand-lavender">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h5 class="our-story-page__glance-name">Presence</h5>
+            <span class="our-story-page__glance-tag">Scaling Reach</span>
+            <p class="our-story-page__glance-desc">Active States: Telangana • Andhra Pradesh • Gujarat • Maharashtra • Karnataka.</p>
+            <div class="our-story-page__glance-footer">
+              <div class="our-story-page__glance-stat"><span>Distribution</span><strong>Super Stockists Network</strong></div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="our-story-page__glance-card">
+            <div class="our-story-page__glance-icon-wrap bg-brand-mint">
+              <i data-lucide="shopping-cart"></i>
+            </div>
+            <h5 class="our-story-page__glance-name">E-commerce</h5>
+            <span class="our-story-page__glance-tag">Digital Milestone</span>
+            <p class="our-story-page__glance-desc">Launched on Amazon.in and pharmacy channels. Reached 5,000+ happy customers in first 4 months.</p>
+            <div class="our-story-page__glance-footer">
+              <div class="our-story-page__glance-stat"><span>Partners</span><strong>Apollo, MedPlus, Amazon</strong></div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="our-story-page__glance-card">
+            <div class="our-story-page__glance-icon-wrap bg-brand-peach">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <h5 class="our-story-page__glance-name">Turnover</h5>
+            <span class="our-story-page__glance-tag">Company Turnover</span>
+            <p class="our-story-page__glance-desc">₹3 Crore+ (FY) for MY Dr Pain Relief Oil alone. Trusted by thousands across urban and rural India.</p>
+            <div class="our-story-page__glance-footer">
+              <div class="our-story-page__glance-stat"><span>Turnover</span><strong>₹3 Crore+</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Meet the Founder Section -->
+      <section class="our-story-page__founder">
+        <h2 class="our-story-page__founder-heading">Meet the Healer</h2>
+
+        <div class="our-story-page__founder-grid">
+          <div class="our-story-page__founder-photo">
+            <div class="our-story-page__founder-photo-frame">
+              <img src="doctor-lab.png" alt="Dr. B. Masthan Yadav in Lab">
+            </div>
+          </div>
+
+          <div class="our-story-page__founder-info">
+            <h3 class="our-story-page__founder-name">Dr. B. Masthan Yadav</h3>
+            <p class="our-story-page__founder-title">Naturopathy Physician & Herbal Researcher</p>
+            <p class="our-story-page__founder-bio">
+              Founder & Managing Director of Healing Hastha Herbals, Dr. Yadav is a visionary leader with over 23 years of experience in natural medicine. His journey from the classroom to the clinic, and finally to the R&D lab, is fueled by a singular passion: making healing simple and chemical-free.
+            </p>
+
+            <div class="our-story-page__accordions">
+              <!-- Section 1 -->
+              <div class="our-story-acc">
+                <div class="our-story-acc-header">
+                  <i data-lucide="graduation-cap"></i>
+                  <span>Qualifications & Training</span>
+                </div>
+                <div class="our-story-acc-content">
+                  <ul>
+                    <li>• BNYS (Naturopathy & Yogic Sciences) - NTR University of Health Sciences</li>
+                    <li>• Fellowship in Sports Medicine - Apollo Hospitals</li>
+                    <li>• Certification in Ergonomics - Singapore General Hospital</li>
+                    <li>• Research Specialist in Herbal Formulations - 15+ years</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Section 2 -->
+              <div class="our-story-acc">
+                <div class="our-story-acc-header">
+                  <i data-lucide="award"></i>
+                  <span>Awards & Recognition</span>
+                </div>
+                <div class="our-story-acc-content">
+                  <ul>
+                    <li>• Global Health Excellence Award</li>
+                    <li>• Udyoga Ratan Award</li>
+                    <li>• Yoga Mitra Award</li>
+                    <li>• Prakruthi Vidya Pravina Award (2010)</li>
+                    <li>• Excellence in Naturopathy (State Level Honors)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Section 3 -->
+              <div class="our-story-acc">
+                <div class="our-story-acc-header">
+                  <i data-lucide="lightbulb"></i>
+                  <span>The MY Dr Breakthrough</span>
+                </div>
+                <div class="our-story-acc-content">
+                  <p>
+                    Determined to find a solution for chronic pain that didn't rely on synthetic painkillers or mineral oils, Dr. Yadav spent 5 years in intensive R&D to develop the "Active Herbal" formula. This led to the creation of MY Dr Pain Relief Oil, now a household name for instant, natural healing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Row -->
+        <div class="our-story-page__timeline-wrapper">
+          <h4 class="our-story-page__timeline-heading">The Journey Timeline</h4>
+          <div class="our-story-page__timeline-desktop">
+            <div class="our-story-page__timeline-item">
+              <div class="our-story-page__timeline-dot"><i data-lucide="graduation-cap"></i></div>
+              <div class="our-story-page__timeline-text">
+                <strong>1995</strong>
+                <span>Graduated BNYS, NTR University</span>
+              </div>
+            </div>
+
+            <div class="our-story-page__timeline-item">
+              <div class="our-story-page__timeline-dot"><i data-lucide="trophy"></i></div>
+              <div class="our-story-page__timeline-text">
+                <strong>2010</strong>
+                <span>Prakruthi Vidya Award</span>
+              </div>
+            </div>
+
+            <div class="our-story-page__timeline-item">
+              <div class="our-story-page__timeline-dot"><i data-lucide="briefcase"></i></div>
+              <div class="our-story-page__timeline-text">
+                <strong>2018</strong>
+                <span>Singapore General Hospital Ergonomics</span>
+              </div>
+            </div>
+
+            <div class="our-story-page__timeline-item">
+              <div class="our-story-page__timeline-dot"><i data-lucide="users"></i></div>
+              <div class="our-story-page__timeline-text">
+                <strong>Today</strong>
+                <span>23+ Years, Millions Healed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Vision & Mission Section -->
+      <section class="our-story-page__vision-mission">
+        <h2 class="our-story-page__vision-mission-heading">Our Philosophy & Purpose</h2>
+        <div class="our-story-page__vision-mission-grid">
+          <!-- Vision -->
+          <div class="our-story-page__vision">
+            <div class="our-story-page__vision-icon">
+              <i data-lucide="star"></i>
+            </div>
+            <h3 class="our-story-page__vision-title">Our Vision</h3>
+            <p class="our-story-page__vision-text">
+              To awaken the innate natural healing capacity within every individual. We envision a world where holistic well-being is accessible to all—where a healthy body and mind are not luxuries, but birthrights.
+            </p>
+            <div class="our-story-page__vision-quote">"Healing from within, naturally."</div>
+          </div>
+
+          <!-- Mission -->
+          <div class="our-story-page__mission">
+            <div class="our-story-page__mission-icon">
+              <i data-lucide="target"></i>
+            </div>
+            <h3 class="our-story-page__mission-title">Our Mission</h3>
+            <p class="our-story-page__mission-text">
+              To offer effective, high-quality nature cure treatment that is both curative (relief from existing problems) and preventive (stopping recurrence).
+            </p>
+            <p class="our-story-page__mission-text">
+              To become the world's leading healthcare provider in natural healing by promoting a healthy lifestyle and enriching lives—enhancing bodily functions and restoring health naturally, safely, and permanently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Core Promises (4 Pillars) -->
+      <section class="our-story-page__promises">
+        <div class="our-story-page__promises-grid">
+          <div class="our-story-page__promise-card">
+            <div class="our-story-page__promise-icon">
+              <i data-lucide="microscope"></i>
+            </div>
+            <h5 class="our-story-page__promise-title">Science-Backed Herbs</h5>
+            <p class="our-story-page__promise-desc">Formulated by doctors, validated by clinical pharmacological research.</p>
+          </div>
+
+          <div class="our-story-page__promise-card">
+            <div class="our-story-page__promise-icon">
+              <i data-lucide="leaf"></i>
+            </div>
+            <h5 class="our-story-page__promise-title">100% Natural</h5>
+            <p class="our-story-page__promise-desc">Zero liquid paraffin, no synthetic dyes, and zero chemical pain suppressants.</p>
+          </div>
+
+          <div class="our-story-page__promise-card">
+            <div class="our-story-page__promise-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h5 class="our-story-page__promise-title">23+ Years of Trust</h5>
+            <p class="our-story-page__promise-desc">Over two decades of clinical OPD patient practice and proven relief.</p>
+          </div>
+
+          <div class="our-story-page__promise-card">
+            <div class="our-story-page__promise-icon">
+              <i data-lucide="heart-pulse"></i>
+            </div>
+            <h5 class="our-story-page__promise-title">Holistic Healing</h5>
+            <p class="our-story-page__promise-desc">Addresses the root neuro-muscular trigger rather than masking pain temporarily.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Legacy & Closing CTA -->
+      <section class="our-story-page__legacy">
+        <div class="our-story-page__legacy-content">
+          <p class="our-story-page__legacy-text">
+            What started as a single clinic in Hyderabad has grown into a GMP-certified, AYUSH-approved manufacturing unit exporting world-class herbal products to multiple countries. But success, for us, is still measured in healing moments—for people of every generation.
+          </p>
+          <div class="our-story-page__legacy-actions">
+            <a href="index.html#products" class="our-story-page__btn-primary">
+              <span>Explore Our Products</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="contact-us.html" class="our-story-page__btn-secondary">
+              <span>Book a Consultation</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="hh-container">
+      <div class="footer-grid-exact">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col-exact footer-brand-exact">
+          <a href="index.html">
+            <img src="https://healinghastha.com/wp-content/themes/flash-child/assets/Healing-Hastha-logo-White.png" alt="Healing Hastha" width="200" height="48">
+          </a>
+          <p style="margin-top: 14px; font-size: 13.5px; color: #cbd5e1; line-height: 1.6;">
+            Bringing you 23 years of Ayurvedic wisdom in every bottle. Natural, effective, and trusted by thousands across India.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://www.facebook.com/healinghastha" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/healinghastha" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@healinghastha" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#143e32"/></svg>
+            </a>
+            <a href="https://x.com/healinghastha" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X (Twitter)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col-exact">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="https://healinghastha.com/knowledge-hub">Blog & Knowledge Hub</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="https://healinghastha.com/faqs">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Products -->
+        <div class="footer-col-exact">
+          <h4>Our Products</h4>
+          <ul class="footer-products-list">
+            <li><a href="product-dr-maya.html">Dr. MAYA Pain Relief Oil</a></li>
+            <li><a href="product-relx-oil.html">Relx Oil (Roll-On)</a></li>
+            <li><a href="product-sleep-8.html">Sleep 8 Pain Relief Balm</a></li>
+            <li><a href="product-tytus-slim-powder.html">Tytus Slim Powder</a></li>
+            <li><a href="product-u-clean.html">U Clean Sanitizer</a></li>
+            <li><a href="product-six-e.html">SIX E Immunity Capsules</a></li>
+            <li><a href="product-kaidarya-hair-oil.html">Kaidarya Hair Oil</a></li>
+            <li><a href="product-ekhamukhi-oil.html">Ekhamukhi Oil</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Get in Touch -->
+        <div class="footer-col-exact">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <a href="tel:+919000990005">+91 9000990005</a>
+              <div style="font-size: 11.5px; color: #94a3b8;">Mon - Sat, 10:00 AM - 7:00 PM</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <a href="mailto:care@healinghastha.com">care@healinghastha.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div>Bachupally, Hyderabad, Telangana - 500090</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Healing Hastha Herbals Pvt Ltd. All Rights Reserved.</div>
+        <div>AYUSH License No: T-2044/Ayur • GMP Certified Unit</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
