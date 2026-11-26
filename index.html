@@ -1387,22 +1387,110 @@
       margin: 0;
     }
 
-    .reviews-grid-cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    /* Reviews Auto-Scroll Carousel Slider */
+    .reviews-slider-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .reviews-slider-track-container {
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 10px 4px 20px 4px;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+
+    .reviews-slider-track-container:active {
+      cursor: grabbing;
+    }
+
+    .reviews-slider-track-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .reviews-slider-track {
+      display: flex;
       gap: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .reviews-slider-track .patient-review-card {
+      flex: 0 0 calc((100% - 48px) / 3);
+      min-width: 320px;
+      scroll-snap-align: start;
+      margin-bottom: 0;
+      box-sizing: border-box;
     }
 
     @media (max-width: 1024px) {
-      .reviews-grid-cards {
-        grid-template-columns: repeat(2, 1fr);
+      .reviews-slider-track .patient-review-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+        min-width: 290px;
       }
     }
 
     @media (max-width: 640px) {
-      .reviews-grid-cards {
-        grid-template-columns: 1fr;
+      .reviews-slider-track .patient-review-card {
+        flex: 0 0 88%;
+        min-width: 260px;
       }
+    }
+
+    .reviews-carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .rev-nav-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      color: var(--brand-forest, #1b4d3e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: all 0.2s ease;
+    }
+
+    .rev-nav-btn:hover {
+      background: var(--brand-forest, #1b4d3e);
+      color: #ffffff;
+      border-color: var(--brand-forest, #1b4d3e);
+      transform: scale(1.06);
+    }
+
+    .rev-dots {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rev-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .rev-dot.active {
+      width: 24px;
+      border-radius: 6px;
+      background: #c06c52;
     }
 
     .patient-review-card {
@@ -3063,78 +3151,166 @@
         <p>Real experiences from individuals who turned to Healing Hastha's authentic Ayurvedic formulations for lasting relief.</p>
       </div>
 
-      <div class="reviews-grid-cards">
-        
-        <!-- Review 1: Dr. MAYA -->
-        <div class="patient-review-card">
-          <div class="review-top-meta">
-            <div class="review-stars-gold">★★★★★</div>
-            <span class="review-product-tag">Dr. MAYA Oil</span>
-          </div>
-          <p class="review-text-quote">
-            "After trying countless balms and painkillers, Dr. MAYA oil finally stopped my severe knee joint stiffness. Within days, I could climb stairs without discomfort and the warming herbal effect lasts for hours."
-          </p>
-          <div class="review-author-wrap">
-            <div class="review-author-initial">PS</div>
-            <div class="review-author-details">
-              <h5>Priya Sharma</h5>
-              <span><span class="review-verified-badge">✓ Verified Buyer</span> • Mumbai</span>
+      <div class="reviews-slider-wrapper" id="reviewsSliderWrapper">
+        <div class="reviews-slider-track-container" id="indexReviewsSliderTrackContainer">
+          <div class="reviews-slider-track" id="indexReviewsSliderTrack">
+            
+            <!-- Review 1: Dr. MAYA -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Dr. MAYA Oil</span>
+              </div>
+              <p class="review-text-quote">
+                "After trying countless balms and painkillers, Dr. MAYA oil finally stopped my severe knee joint stiffness. Within days, I could climb stairs without discomfort and the warming herbal effect lasts for hours."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">PS</div>
+                <div class="review-author-details">
+                  <h5>Priya Sharma</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Mumbai</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Review 2: Sleep 8 -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Sleep 8 Balm</span>
+              </div>
+              <p class="review-text-quote">
+                "Sleep 8 Pain Relief Balm has completely transformed my nighttime routine. Massaging a tiny dab on the temples quiets racing thoughts and gives uninterrupted, deep 8-hour sleep without morning brain fog."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">RK</div>
+                <div class="review-author-details">
+                  <h5>Rajesh Kumar</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Hyderabad</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3: Relx Oil -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Relx Oil Roll-On</span>
+              </div>
+              <p class="review-text-quote">
+                "Relx Oil is a permanent staple in my office bag. A single roll-on swipe on the forehead and temples dissolves screen-time tension headaches and sinus throbbing in less than 10 minutes. Completely non-sticky."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">AV</div>
+                <div class="review-author-details">
+                  <h5>Ananya V.</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Chennai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 4: Clinical Recommendation -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Doctor's Choice</span>
+              </div>
+              <p class="review-text-quote">
+                "As an integrative healthcare practitioner, I look closely at botanical purity and AYUSH standardization. Dr. Masthan's cold-pressed decoctions and absence of mineral oils make this series truly trustworthy."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">SK</div>
+                <div class="review-author-details">
+                  <h5>Dr. S. K. Rao</h5>
+                  <span><span class="review-verified-badge">✓ Verified Physician</span> • Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 5: Kaidarya Hair Oil -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Kaidarya Hair Oil</span>
+              </div>
+              <p class="review-text-quote">
+                "Reduced severe comb hair fall within 3 weeks of regular nighttime scalp massage. The pure Bhringraj and Amla blend makes the roots feel noticeably stronger and leaves hair soft, silky and lustrous."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">KN</div>
+                <div class="review-author-details">
+                  <h5>Kavitha N.</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Hyderabad</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 6: Tytus Slim Powder -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Tytus Slim Powder</span>
+              </div>
+              <p class="review-text-quote">
+                "Gentle herbal metabolism support with no synthetic stimulants or jittery crashes. After 4 weeks of consistent intake with warm water, I feel significantly lighter, active, and digestion is completely regular."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">VR</div>
+                <div class="review-author-details">
+                  <h5>Vikram Reddy</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 7: SIX E Capsules -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">SIX E Capsules</span>
+              </div>
+              <p class="review-text-quote">
+                "Noticeable vitality and natural immunity boost for daily active stamina. Authentic classical Ayurvedic formulation that works holistically without any side effects or heaviness throughout hectic workdays."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">SM</div>
+                <div class="review-author-details">
+                  <h5>Sunita Menon</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Kochi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 8: Ekhamukhi Oil -->
+            <div class="patient-review-card">
+              <div class="review-top-meta">
+                <div class="review-stars-gold">★★★★★</div>
+                <span class="review-product-tag">Ekhamukhi Oil</span>
+              </div>
+              <p class="review-text-quote">
+                "Remarkable deep-acting topical relief for persistent joint swelling and sports stiffness. The warming herbal penetration provides hours of comfort and restores easy mobility."
+              </p>
+              <div class="review-author-wrap">
+                <div class="review-author-initial">MN</div>
+                <div class="review-author-details">
+                  <h5>Meera Nambiar</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Pune</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Review 2: Sleep 8 -->
-        <div class="patient-review-card">
-          <div class="review-top-meta">
-            <div class="review-stars-gold">★★★★★</div>
-            <span class="review-product-tag">Sleep 8 Balm</span>
-          </div>
-          <p class="review-text-quote">
-            "Sleep 8 Pain Relief Balm has completely transformed my nighttime routine. Massaging a tiny dab on the temples quiets racing thoughts and gives uninterrupted, deep 8-hour sleep without morning brain fog."
-          </p>
-          <div class="review-author-wrap">
-            <div class="review-author-initial">RK</div>
-            <div class="review-author-details">
-              <h5>Rajesh Kumar</h5>
-              <span><span class="review-verified-badge">✓ Verified Buyer</span> • Hyderabad</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3: Relx Oil -->
-        <div class="patient-review-card">
-          <div class="review-top-meta">
-            <div class="review-stars-gold">★★★★★</div>
-            <span class="review-product-tag">Relx Oil Roll-On</span>
-          </div>
-          <p class="review-text-quote">
-            "Relx Oil is a permanent staple in my office bag. A single roll-on swipe on the forehead and temples dissolves screen-time tension headaches and sinus throbbing in less than 10 minutes. Completely non-sticky."
-          </p>
-          <div class="review-author-wrap">
-            <div class="review-author-initial">AV</div>
-            <div class="review-author-details">
-              <h5>Ananya V.</h5>
-              <span><span class="review-verified-badge">✓ Verified Buyer</span> • Chennai</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 4: Clinical Recommendation -->
-        <div class="patient-review-card">
-          <div class="review-top-meta">
-            <div class="review-stars-gold">★★★★★</div>
-            <span class="review-product-tag">Doctor's Choice</span>
-          </div>
-          <p class="review-text-quote">
-            "As an integrative healthcare practitioner, I look closely at botanical purity and AYUSH standardization. Dr. Masthan's cold-pressed decoctions and absence of mineral oils make this series truly trustworthy."
-          </p>
-          <div class="review-author-wrap">
-            <div class="review-author-initial">SK</div>
-            <div class="review-author-details">
-              <h5>Dr. S. K. Rao</h5>
-              <span><span class="review-verified-badge">✓ Verified Physician</span> • Bengaluru</span>
-            </div>
-          </div>
+        <!-- Slider Controls: Previous, Dots, Next -->
+        <div class="reviews-carousel-controls">
+          <button type="button" class="rev-nav-btn prev" onclick="scrollIndexReviews(-1)" aria-label="Previous reviews">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="rev-dots" id="indexRevDots"></div>
+          <button type="button" class="rev-nav-btn next" onclick="scrollIndexReviews(1)" aria-label="Next reviews">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
 
       </div>
@@ -3661,7 +3837,113 @@
         }
       });
     });
-  </script>
+  
+    // ================= AUTOMATIC HORIZONTAL REVIEWS SLIDER =================
+    let indexRevIndex = 0;
+    let indexRevAutoTimer = null;
+    let indexRevIsHovered = false;
+
+    function initIndexReviewsSlider() {
+      const track = document.getElementById('indexReviewsSliderTrack');
+      const container = document.getElementById('indexReviewsSliderTrackContainer');
+      const dotsContainer = document.getElementById('indexRevDots');
+      if (!track || !container) return;
+
+      const cards = track.querySelectorAll('.patient-review-card');
+      const totalCards = cards.length;
+      if (totalCards <= 1) return;
+
+      if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        cards.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'rev-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to review ' + (idx + 1));
+          dot.addEventListener('click', () => scrollToIndexReview(idx));
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      container.addEventListener('mouseenter', () => { indexRevIsHovered = true; });
+      container.addEventListener('mouseleave', () => { indexRevIsHovered = false; });
+      container.addEventListener('touchstart', () => { indexRevIsHovered = true; }, { passive: true });
+      container.addEventListener('touchend', () => {
+        setTimeout(() => { indexRevIsHovered = false; }, 2000);
+      }, { passive: true });
+
+      container.addEventListener('scroll', () => {
+        const cardWidth = (cards[0].offsetWidth || 320) + 24;
+        const currentPos = container.scrollLeft;
+        const activeIdx = Math.round(currentPos / cardWidth);
+        updateIndexReviewDots(Math.min(activeIdx, totalCards - 1));
+      }, { passive: true });
+
+      startIndexReviewAutoScroll();
+    }
+
+    function scrollToIndexReview(idx) {
+      const container = document.getElementById('indexReviewsSliderTrackContainer');
+      const track = document.getElementById('indexReviewsSliderTrack');
+      if (!container || !track) return;
+
+      const cards = track.querySelectorAll('.patient-review-card');
+      if (!cards[idx]) return;
+
+      indexRevIndex = idx;
+      const targetLeft = cards[idx].offsetLeft - track.offsetLeft;
+      container.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      updateIndexReviewDots(idx);
+    }
+
+    function scrollIndexReviews(direction) {
+      const container = document.getElementById('indexReviewsSliderTrackContainer');
+      const track = document.getElementById('indexReviewsSliderTrack');
+      if (!container || !track) return;
+
+      const cards = track.querySelectorAll('.patient-review-card');
+      const total = cards.length;
+      if (total === 0) return;
+
+      indexRevIndex = (indexRevIndex + direction + total) % total;
+      scrollToIndexReview(indexRevIndex);
+    }
+
+    function updateIndexReviewDots(activeIdx) {
+      const dots = document.querySelectorAll('#indexRevDots .rev-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === activeIdx) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+    }
+
+    function startIndexReviewAutoScroll() {
+      if (indexRevAutoTimer) clearInterval(indexRevAutoTimer);
+      indexRevAutoTimer = setInterval(() => {
+        if (indexRevIsHovered) return;
+        const track = document.getElementById('indexReviewsSliderTrack');
+        const container = document.getElementById('indexReviewsSliderTrackContainer');
+        if (!track || !container) return;
+        const cards = track.querySelectorAll('.patient-review-card');
+        const total = cards.length;
+        if (total <= 1) return;
+
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 30) {
+          indexRevIndex = 0;
+        } else {
+          indexRevIndex = (indexRevIndex + 1) % total;
+        }
+        scrollToIndexReview(indexRevIndex);
+      }, 3800);
+    }
+
+    // Initialize on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initIndexReviewsSlider);
+    } else {
+      initIndexReviewsSlider();
+    }
+</script>
 
   
 
