@@ -493,22 +493,32 @@
     }
 
     .our-story-page__glance-footer {
-      border-top: 1px solid #f1f5f9;
-      padding-top: 12px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding-top: 14px;
+      margin-top: auto;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 10px;
     }
 
     .our-story-page__glance-stat {
-      font-size: 12.5px;
       display: flex;
-      justify-content: space-between;
-      color: var(--text-muted);
+      flex-direction: column;
+      gap: 3px;
+    }
+    .our-story-page__glance-stat span {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted, #718096);
     }
     .our-story-page__glance-stat strong {
-      color: var(--text-main);
+      color: var(--brand-forest, #1b4d3e);
+      font-size: 13.5px;
       font-weight: 700;
+      line-height: 1.35;
+      word-break: normal;
     }
 
     /* 5. Meet the Founder Section */
@@ -1175,7 +1185,6 @@
             <p class="our-story-page__glance-desc">Herbal leaf embracing human form – symbolizing nature protecting humanity. Represents our vision to encircle the world with herbal wellness.</p>
             <div class="our-story-page__glance-footer">
               <div class="our-story-page__glance-stat"><span>Founded</span><strong>2010 • Hyderabad</strong></div>
-              <div class="our-story-page__glance-stat"><span>Facility</span><strong>Bachupally</strong></div>
             </div>
           </div>
 
