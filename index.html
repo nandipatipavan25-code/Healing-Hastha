@@ -1818,206 +1818,55 @@
     }
 
   
-    /* ================= Auto-Scrolling Hero Banner Carousel ================= */
-    .banner-carousel-container {
+    /* ================= Products Page Hero Banner ================= */
+    .products-hero-banner {
       width: 100%;
       background: #ffffff;
       border-bottom: 1px solid var(--border-subtle);
-      position: relative;
       overflow: hidden;
-    }
-
-    .banner-carousel-stage {
-      width: 100%;
-      height: 380px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    @media (max-width: 768px) {
-      .banner-carousel-stage {
-        height: 240px;
-      }
-    }
-
-    @media (min-width: 1400px) {
-      .banner-carousel-stage {
-        height: 440px;
-      }
-    }
-
-    .banner-carousel-track {
-      display: flex;
-      height: 100%;
-      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .banner-carousel-slide {
-      flex: 0 0 100%;
-      width: 100%;
-      height: 100%;
       position: relative;
     }
 
-    .banner-carousel-slide a {
+    .products-hero-banner picture {
       display: block;
       width: 100%;
-      height: 100%;
-      text-decoration: none;
     }
 
-    .banner-carousel-slide img {
+    .products-hero-banner__img {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 460px;
       object-fit: cover;
       object-position: center;
       display: block;
     }
 
-    /* Floating Banner Overlay Badge */
-    .banner-slide-caption {
-      position: absolute;
-      bottom: 24px;
-      left: 32px;
-      background: rgba(27, 77, 62, 0.88);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: #ffffff;
-      padding: 14px 22px;
-      border-radius: var(--radius-md);
-      max-width: 460px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.15);
-      animation: captionFadeIn 0.5s ease-out;
-    }
-
     @media (max-width: 768px) {
-      .banner-slide-caption {
-        bottom: 16px;
-        left: 16px;
-        right: 16px;
-        padding: 10px 14px;
-        max-width: none;
+      .products-hero-banner__img {
+        max-height: 320px;
       }
     }
 
-    .banner-slide-caption .slide-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #a7f3d0;
-      margin-bottom: 4px;
-    }
+    
 
-    .banner-slide-caption .slide-title {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      font-weight: 700;
-      margin: 0 0 4px 0;
-      line-height: 1.25;
-    }
-
-    @media (max-width: 768px) {
-      .banner-slide-caption .slide-title {
-        font-size: 15px;
-      }
-    }
-
-    .banner-slide-caption .slide-sub {
-      font-size: 12.5px;
-      color: #e2e8f0;
-      margin: 0;
-      line-height: 1.4;
-    }
+    
 
     @media (max-width: 600px) {
-      .banner-slide-caption .slide-sub {
-        display: none;
-      }
+      
+      
+      
     }
 
-    /* Carousel Nav Arrows */
-    .banner-nav-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 42px;
-      height: 42px;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(0,0,0,0.1);
-      border-radius: 50%;
-      color: var(--brand-forest);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .banner-nav-btn:hover {
-      background: #ffffff;
-      color: var(--brand-terracotta);
-      transform: translateY(-50%) scale(1.08);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.22);
-    }
-
-    .banner-nav-btn.prev {
-      left: 18px;
-    }
-
-    .banner-nav-btn.next {
-      right: 18px;
-    }
-
-    @media (max-width: 600px) {
-      .banner-nav-btn {
-        width: 34px;
-        height: 34px;
-      }
-      .banner-nav-btn.prev { left: 8px; }
-      .banner-nav-btn.next { right: 8px; }
-    }
-
-    /* Carousel Dots Indicator */
-    .banner-dots-container {
-      position: absolute;
-      bottom: 12px;
-      right: 32px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      z-index: 10;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(4px);
-      padding: 6px 12px;
-      border-radius: 20px;
-    }
+    
+    
 
     @media (max-width: 768px) {
-      .banner-dots-container {
-        display: none;
-      }
+      
     }
 
-    .banner-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+    
 
-    .banner-dot.active {
-      width: 26px;
-      border-radius: 6px;
-      background: #ffffff;
-    }
+    
 
   
     /* Filter Pill Icons */
@@ -2758,54 +2607,21 @@
 
 
 
-  <!-- Authentic Photographic Hero Banner (From Original Website) -->
-    <!-- ================= AUTO-SCROLLING HERO BANNER CAROUSEL ================= -->
-  <div class="banner-carousel-container" id="bannerCarousel" aria-label="Featured Ayurvedic Remedies Carousel">
-    <div class="banner-carousel-stage">
-      <div class="banner-carousel-track" id="bannerTrack">
-
-        <!-- Slide 1: Authentic Herbal Range -->
-        <div class="banner-carousel-slide" data-slide="0">
-          <a href="#productsGrid">
-            <picture>
-              <source media="(min-width: 768px)" srcset="https://healinghastha.com/wp-content/uploads/2026/09/Banner-scaled.webp">
-              <img src="https://healinghastha.com/wp-content/uploads/2026/09/Banner-4.webp" alt="Our Herbal Products Banner" loading="eager" fetchpriority="high">
-            </picture>
-</a>
-        </div>
-
-        <!-- Slide 2: Dr. MAYA Pain Relief (Amazon Prime) -->
-        <div class="banner-carousel-slide" data-slide="1">
-          <a href="product-dr-maya.html">
-            <img src="https://healinghastha.com/wp-content/uploads/2026/11/Muscle_Stiffness_and_Everyday_Aches_Sleep_8_Pain_Relief_Balm-1024x470.webp" alt="Dr. MAYA Joint and Muscle Pain Relief Oil" loading="lazy">
-</a>
-        </div>
-
-        <!-- Slide 3: Relx Oil & Sleep 8 (Apollo Pharmacy & MedPlus) -->
-        <div class="banner-carousel-slide" data-slide="2">
-          <a href="product-sleep-8.html">
-            <img src="https://healinghastha.com/wp-content/uploads/2026/10/Healing-Hastha-RELX-Oil-Nightstand-Scene-1024x469.png" alt="Relx Oil & Sleep 8 Nightstand Restorative Care" loading="lazy">
-</a>
-        </div>
-
-      </div>
-
-      <!-- Navigation Arrows -->
-      <button type="button" class="banner-nav-btn prev" id="bannerPrevBtn" aria-label="Previous Banner Slide">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button type="button" class="banner-nav-btn next" id="bannerNextBtn" aria-label="Next Banner Slide">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-      <!-- Indicator Dots -->
-      <div class="banner-dots-container" id="bannerDots">
-        <span class="banner-dot active" data-index="0" onclick="goToSlide(0)"></span>
-        <span class="banner-dot" data-index="1" onclick="goToSlide(1)"></span>
-        <span class="banner-dot" data-index="2" onclick="goToSlide(2)"></span>
-      </div>
-    </div>
-  </div>
+  <!-- Products Page Hero Banner (Responsive: Mobile vs Desktop) -->
+  <section class="products-hero-banner" aria-label="Our Herbal Products Banner">
+    <picture>
+      <!-- Desktop View (768px and up) -->
+      <source media="(min-width: 768px)" srcset="https://healinghastha.com/wp-content/uploads/2026/09/Banner-scaled.webp">
+      <!-- Mobile View (Fallback / Default) -->
+      <img 
+        src="https://healinghastha.com/wp-content/uploads/2026/09/Banner-4.webp" 
+        alt="Healing Hastha Ayurvedic Remedies & Products" 
+        class="products-hero-banner__img"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
+  </section>
 
 
   <div class="hh-container">
@@ -3847,130 +3663,7 @@
     });
   </script>
 
-  <script>
-    // ================= Auto-Scrolling Banner Carousel Logic =================
-    (function initBannerCarousel() {
-      const track = document.getElementById('bannerTrack');
-      const container = document.getElementById('bannerCarousel');
-      const dots = document.querySelectorAll('.banner-dot');
-      const prevBtn = document.getElementById('bannerPrevBtn');
-      const nextBtn = document.getElementById('bannerNextBtn');
-
-      if (!track || !container) return;
-
-      const totalSlides = document.querySelectorAll('.banner-carousel-slide').length;
-      let currentSlide = 0;
-      let autoScrollInterval = null;
-      const SCROLL_DELAY = 4000; // Auto-scroll every 4 seconds
-
-      function updateSlide(index) {
-        currentSlide = (index + totalSlides) % totalSlides;
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-        dots.forEach((dot, idx) => {
-          dot.classList.toggle('active', idx === currentSlide);
-        });
-      }
-
-      window.goToSlide = function(index) {
-        updateSlide(index);
-        restartAutoScroll();
-      };
-
-      function nextSlide() {
-        updateSlide(currentSlide + 1);
-      }
-
-      function prevSlide() {
-        updateSlide(currentSlide - 1);
-      }
-
-      function startAutoScroll() {
-        if (!autoScrollInterval) {
-          autoScrollInterval = setInterval(nextSlide, SCROLL_DELAY);
-        }
-      }
-
-      function stopAutoScroll() {
-        if (autoScrollInterval) {
-          clearInterval(autoScrollInterval);
-          autoScrollInterval = null;
-        }
-      }
-
-      function restartAutoScroll() {
-        stopAutoScroll();
-        startAutoScroll();
-      }
-
-      if (nextBtn) {
-        nextBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          nextSlide();
-          restartAutoScroll();
-        });
-      }
-
-      if (prevBtn) {
-        prevBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          prevSlide();
-          restartAutoScroll();
-        });
-      }
-
-      // Pause on hover
-      container.addEventListener('mouseenter', stopAutoScroll);
-      container.addEventListener('mouseleave', startAutoScroll);
-
-      // Touch swipe support on mobile
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      container.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        stopAutoScroll();
-      }, { passive: true });
-
-      container.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        if (touchStartX - touchEndX > 50) {
-          nextSlide();
-        } else if (touchEndX - touchStartX > 50) {
-          prevSlide();
-        }
-        startAutoScroll();
-      }, { passive: true });
-
-      // Start automatic scrolling
-      startAutoScroll();
-    })();
   
-  function openMobileNav() {
-    const drawer = document.getElementById('mobileNavDrawer');
-    const overlay = document.getElementById('mobileNavOverlay');
-    if (drawer && overlay) {
-      drawer.classList.add('active');
-      overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeMobileNav() {
-    const drawer = document.getElementById('mobileNavDrawer');
-    const overlay = document.getElementById('mobileNavOverlay');
-    if (drawer && overlay) {
-      drawer.classList.remove('active');
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
-  const mobToggleBtn = document.getElementById('mobile-menu-open-btn');
-  if (mobToggleBtn) {
-    mobToggleBtn.addEventListener('click', openMobileNav);
-  }
-
-</script>
 
 </body>
 </html>
