@@ -323,92 +323,72 @@
       box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.1);
     }
 
-    /* Products Grid Section */
+    /* Products Grid Section - Minimal Product Cards (No images, No descriptions) */
     .products-grid-section {
       background: #faf8f5;
       padding: 10px 0 60px 0;
     }
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 900px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 580px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
     }
     .product-card {
       background: #ffffff;
-      border-radius: 18px;
+      border-radius: 16px;
       border: 1px solid #ede8e1;
-      overflow: hidden;
+      padding: 22px 20px 20px 20px;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      justify-content: space-between;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      min-height: 250px;
+      box-sizing: border-box;
     }
     .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-      border-color: #cbd5e1;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(27, 77, 62, 0.08);
+      border-color: var(--brand-forest, #1b4d3e);
     }
     .card-media-box {
-      background: #ffffff;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      border-bottom: 1px solid #f1f5f9;
-      overflow: hidden;
+      display: none !important;
     }
-    .card-media-link {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background: #fbfbf8;
-    }
-    .card-media-link img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .product-card:hover .card-media-link img {
-      transform: scale(1.05);
-    }
-    .card-mini-gallery-strip {
-      width: 100% !important;
-      box-sizing: border-box !important;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6px 10px 8px 10px !important;
-      background: #ffffff;
-      border-top: 1px solid #f8fafc;
-    }
-    .card-mini-thumb {
-      width: 28px !important;
-      height: 28px !important;
-      padding: 1px !important;
-      border-radius: 5px !important;
-      flex-shrink: 0;
+    .product-tagline {
+      display: none !important;
     }
     .card-body {
-      padding: 16px 18px 18px 18px;
+      padding: 0 !important;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      justify-content: space-between;
     }
     .product-title {
-      font-size: 17.5px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--brand-forest, #1b4d3e);
-      margin: 4px 0 6px 0;
-      line-height: 1.3;
+      margin: 8px 0 10px 0;
+      line-height: 1.35;
       font-family: var(--font-display, serif);
-      min-height: 46px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
     }
     .product-title a {
       color: inherit;
@@ -418,26 +398,15 @@
     .product-title a:hover {
       color: var(--brand-terracotta, #c86d51);
     }
-    .product-tagline {
-      font-size: 12.5px;
-      color: #64748b;
-      line-height: 1.5;
-      margin: 0 0 12px 0;
-      flex-grow: 1;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      height: 56.5px;
-      max-height: 56.5px;
-    }
     .price-row {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
       gap: 6px;
-      margin-bottom: 10px;
-      min-height: 28px;
+      margin-top: auto;
+      margin-bottom: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed #e8e3dc;
     }
     .current-price {
       font-size: 21px;
