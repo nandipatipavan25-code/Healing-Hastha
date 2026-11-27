@@ -22,18 +22,117 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Proportional Typography & Clean Font Sizes Override (User Requirement) */
+    /* Hero Section Height Reduction */
+    .hero {
+      min-height: auto !important;
+      height: auto !important;
+      padding: 2.75rem 0 3rem 0 !important;
+    }
+    @media (min-width: 992px) {
+      .hero {
+        padding: 3rem 0 3rem 0 !important;
+      }
+    }
+    .hero__left-content {
+      padding-right: 2.5rem !important;
+      margin-bottom: 0 !important;
+    }
     h1.hero__title {
-      font-size: clamp(30px, 4.2vw, 46px) !important;
+      font-size: clamp(28px, 3.8vw, 42px) !important;
       line-height: 1.15 !important;
       font-family: var(--font-display, 'Playfair Display', serif) !important;
       font-weight: 700 !important;
+      margin-bottom: 0.85rem !important;
     }
     .hero__description {
-      font-size: 15.5px !important;
-      line-height: 1.65 !important;
-      max-width: 520px;
+      font-size: 14.5px !important;
+      line-height: 1.55 !important;
+      max-width: 500px;
       color: #334155;
+      margin-bottom: 1.25rem !important;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 0.75rem !important;
+      margin-bottom: 1.25rem !important;
+      justify-content: flex-start !important;
+    }
+    .hero__btn-primary,
+    .hero__btn-secondary {
+      padding: 9px 22px !important;
+      font-size: 13.5px !important;
+      font-weight: 700 !important;
+    }
+    .hero__badges-grid {
+      display: flex;
+      gap: 0.75rem !important;
+      margin-bottom: 1rem !important;
+    }
+    .hero__badge-card {
+      background: #ffffff !important;
+      border-radius: 12px !important;
+      padding: 0.65rem 0.4rem !important;
+      text-align: center;
+      width: 100%;
+      border: 1px solid rgba(27, 77, 62, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    .hero__badge-icon-wrapper {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.35rem auto !important;
+    }
+    .hero__badge-icon {
+      width: 17px !important;
+      height: 17px !important;
+    }
+    .hero__badge-text {
+      font-size: 10.5px !important;
+      font-weight: 700;
+      color: var(--brand-forest);
+      line-height: 1.2 !important;
+    }
+    .hero__inline-badges {
+      display: flex;
+      gap: 0.75rem !important;
+      flex-wrap: wrap;
+    }
+    .hero__inline-badge {
+      font-size: 11.5px !important;
+      gap: 5px !important;
+    }
+    .hero__inline-badge-icon {
+      width: 13px !important;
+      height: 13px !important;
+    }
+    .hero__carousel-indicators-top {
+      margin-bottom: 1rem !important;
+    }
+    .hero__carousel-stage {
+      height: 340px !important;
+      min-height: 340px !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .carousel-3d-card {
+      width: 260px !important;
+      height: 340px !important;
+      margin-left: -130px !important;
+      border-radius: 16px !important;
+    }
+    .hero__carousel-info-container {
+      min-height: 95px !important;
+      gap: 0.65rem !important;
+    }
+    .hero-product-slider .info-pane h3,
+    .hero-product-slider h3.h1,
+    .hero-product-slider h3.h2 {
+      font-size: 1.75rem !important;
+      line-height: 1.15 !important;
+      margin-bottom: 0.2rem !important;
     }
     .founder__title, .home-knowledge__title, .home-testimonials__title {
       font-size: clamp(24px, 3.2vw, 34px) !important;
@@ -1255,29 +1354,9 @@
 
                   <h3 class="h1 text-white mb-2 font-display" style="font-family: var(--font-display, serif); font-size: 2.5rem; font-weight: 500; letter-spacing: -0.5px;">Dr. MAYA Pain Relief Oil</h3>
 
-                  <p class="text-white-50 text-sm mb-4 max-w-250 mx-auto" style="min-height: 20px; font-weight: 300; max-width: 280px;">Ingredients
+                  <p class="text-white-50 text-sm mb-3 max-w-250 mx-auto" style="font-size: 13px; line-height: 1.45; font-weight: 300; max-width: 320px;">An Ayurvedic herbal massage oil formulated to provide soothing relief from everyday aches.</p>
 
-Each 10 ml contains:
-
-
-
- 	Camphor Crystals – 10%
-
- 	Wintergreen Oil – 30%
-
- 	Eucalyptus Leaf Oil – 30%
-
- 	Menthol Crystals – 10%
-
- 	Nirgundi Leaf Extract – 5%
-
- 	Black Pepper Fruit Extract – 2%
-
- 	Sesame Oil – 3%
-
- 	Ayurvedic Taila Base – q.s.</p>
-
-                  <a href="https://healinghastha.com/product/dr-maya-pain-relief-oil/" class="d-inline-flex align-items-center gap-2 px-4 py-2 border border-white-20 rounded-pill text-white text-decoration-none text-sm font-semibold hover-bg-white-text-forest" style="transition: var(--transition-smooth, all 0.3s ease);">View Product</a>
+                  <a href="product-dr-maya.html" class="d-inline-flex align-items-center gap-2 px-4 py-2 border border-white-20 rounded-pill text-white text-decoration-none text-sm font-semibold hover-bg-white-text-forest" style="transition: var(--transition-smooth, all 0.3s ease);">View Product</a>
 
                               </div>
 
