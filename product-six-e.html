@@ -4188,11 +4188,16 @@
     document.addEventListener('DOMContentLoaded', () => {
       updatePdpBadge();
       updatePriceDisplay();
+      initReviewsSlider();
       if (window.location.hash === '#tab-gallery') {
         const gBtn = document.querySelector('.tab-nav-btn[onclick*="gallery"]');
         if (gBtn) switchPdpTab('gallery', gBtn);
       }
-    });
+    }
+    );
+    if (document.readyState !== 'loading') {
+      initReviewsSlider();
+    }
   
   function openMobileNav() {
     const drawer = document.getElementById('mobileNavDrawer');
