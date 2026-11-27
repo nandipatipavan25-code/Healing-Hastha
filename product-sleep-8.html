@@ -472,6 +472,19 @@
       color: var(--text-main);
     }
 
+    .btn-add-pdp-cart.in-cart {
+      background: var(--brand-forest, #1b4d3e) !important;
+      color: #ffffff !important;
+      border-color: #14382d !important;
+    }
+    .btn-add-pdp-cart.in-cart:hover {
+      background: #14382d !important;
+      box-shadow: 0 4px 14px rgba(27, 77, 62, 0.35) !important;
+    }
+    .btn-sticky-cart.in-cart {
+      background: var(--brand-forest, #1b4d3e) !important;
+      color: #ffffff !important;
+    }
     .btn-add-pdp-cart {
       flex-grow: 1;
       background: var(--brand-terracotta);
@@ -3749,6 +3762,12 @@
       } catch (e) {
         cart = [];
       }
+
+      const existingItem = cart.find(item => item.id === productId);
+      if (existingItem) {
+        window.location.href = 'index.html#cart';
+        return;
+      }
       
       let pricePerUnit = unitPrice;
       if (currentQty === 2) {
@@ -3783,6 +3802,24 @@
           badge.textContent = count;
           badge.style.display = count > 0 ? 'inline-block' : 'none';
         });
+
+        const inCart = cart.find(item => item.id === productId);
+        const pdpCartBtn = document.querySelector('.btn-add-pdp-cart');
+        const stickyCartBtn = document.querySelector('.btn-sticky-cart');
+        if (pdpCartBtn) {
+          if (inCart) {
+            pdpCartBtn.classList.add('in-cart');
+            pdpCartBtn.innerHTML = `
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              <span>View Basket (Added)</span>
+            `;
+            pdpCartBtn.title = "Item is in your basket. Click to view basket.";
+          }
+        }
+        if (stickyCartBtn && inCart) {
+          stickyCartBtn.classList.add('in-cart');
+          stickyCartBtn.innerHTML = `<span>View Basket (Added)</span>`;
+        }
       } catch(e) {}
     }
 
