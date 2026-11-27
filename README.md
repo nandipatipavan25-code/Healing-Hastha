@@ -13,7 +13,7 @@ Official omnichannel digital storefront and clinical consultation desk for **Hea
 ├── product-dr-maya-pain-relief-oil.html # Dr. MAYA Pain Relief Oil (Canonical PDP)
 ├── product-relx-oil.html                # Relx Oil (Tension & Headache Roll-on) PDP
 ├── product-sleep-8.html                 # Sleep 8 (Deep Sleep & Pain Relief Balm) PDP
-├── product-ekhamukhi-oil.html           # Ekhamukhi Ear Drops & Oil PDP
+├── product-ekhamukhi-oil.html           # Ekhamukhi 24K Gold Radiant Facial Serum PDP
 ├── product-kaidarya-hair-oil.html       # Kaidarya Botanical Hair Oil PDP
 ├── product-six-e.html                   # Six-E Botanical Capsule PDP
 ├── product-tytus-slim-powder.html       # Tytus Slim Detox Powder PDP

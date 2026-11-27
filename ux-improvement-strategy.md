@@ -106,7 +106,8 @@ Add a responsive filter pill bar above the product grid:
 - **`🏥 Apollo Pharmacy (2)`** *(Shows Sleep 8 & Relx Oil)*
 - **`💊 MedPlus (2)`** *(Shows Sleep 8 & Relx Oil)*
 - **`📦 Amazon Prime (2)`** *(Shows Dr. MAYA & Relx Oil)*
-- **`Joint & Pain Care`** *(Dr. MAYA, Ekhamukhi)*
+- **`Joint & Pain Care`** *(Dr. MAYA, Relx Oil)*
+- **`Skincare & Facial Radiance`** *(Ekhamukhi Oil)*
 - **`Sleep & Stress`** *(Sleep 8, Relx Oil)*
 - **`Metabolic & Immunity`** *(Tytus Slim, SIX E)*
 - **`Live Search Bar:`** Real-time client-side filter by symptom (e.g. typing "sleep", "knee", "headache").

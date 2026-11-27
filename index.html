@@ -2783,6 +2783,9 @@
           <button type="button" class="filter-pill" data-filter="sleep">
             Sleep &amp; Stress
           </button>
+          <button type="button" class="filter-pill" data-filter="skin">
+            Skin &amp; Hair
+          </button>
         </div>
 
         <div class="search-input-wrap">
@@ -2988,7 +2991,7 @@
         </div>
 
         <!-- ================= PRODUCT 5: Kaidarya Herbal Hair Oil ================= -->
-        <div class="product-card" data-id="1144" data-category="hair" data-retailers="" data-name="kaidarya herbal hair oil hairfall dandruff">
+        <div class="product-card" data-id="1144" data-category="hair skin" data-retailers="" data-name="kaidarya herbal hair oil hairfall dandruff hair growth">
           <div class="card-media-box">
             <a href="product-kaidarya-hair-oil.html" class="card-media-link" aria-label="View Kaidarya Herbal Hair Oil">
               <img src="https://healinghastha.com/wp-content/uploads/2021/03/Kaidarya-Hair-Oil-Cover-image-1024x1024.webp" alt="Kaidarya Herbal Hair Oil" loading="lazy">
@@ -3056,10 +3059,10 @@
         </div>
 
         <!-- ================= PRODUCT 7: Ekhamukhi Oil ================= -->
-        <div class="product-card" data-id="737" data-category="pain" data-retailers="" data-name="ekhamukhi oil neuromuscular chronic pain">
+        <div class="product-card" data-id="737" data-category="skin" data-retailers="" data-name="ekhamukhi oil facial serum radiant glow skin care 24k gold almond coconut">
           <div class="card-media-box">
             <a href="product-ekhamukhi-oil.html" class="card-media-link" aria-label="View Ekhamukhi Oil">
-              <img src="https://healinghastha.com/wp-content/uploads/2021/03/WhatsApp-Image-2025-06-06-at-17.06.56_4d0cbf66-1024x1024.jpg" alt="Ekhamukhi Oil" loading="lazy">
+              <img src="https://healinghastha.com/wp-content/uploads/2021/03/WhatsApp-Image-2025-06-06-at-17.06.56_4d0cbf66-1024x1024.jpg" alt="Ekhamukhi Oil – 24K Gold Radiant Facial Serum" loading="lazy">
             </a>
           </div>
           <div class="card-body">
@@ -3068,11 +3071,11 @@
               <a href="product-ekhamukhi-oil.html">Ekhamukhi Oil</a>
             </h3>
             <p class="product-tagline">
-              Artisanal high-potency Taila crafted for stubborn joint stiffness, frozen shoulder, sciatica cramps &amp; deep tendon distress.
+              Exclusive serum-based facial oil infused with 24-carat gold flakes, almond milk &amp; virgin coconut for radiant complexion and sun-damage protection.
             </p>
             <div class="price-row">
               <span class="current-price">₹4999</span>
-              <span class="taxes-note">200ml • <strong>Free Delivery Included</strong></span>
+              <span class="taxes-note">30ml Dropper • <strong>Free Delivery Included</strong></span>
             </div>
             <div class="card-actions-hub">
               <div class="card-action-buttons">
@@ -3302,13 +3305,13 @@
                 <span class="review-product-tag">Ekhamukhi Oil</span>
               </div>
               <p class="review-text-quote">
-                "Remarkable deep-acting topical relief for persistent joint swelling and sports stiffness. The warming herbal penetration provides hours of comfort and restores easy mobility."
+                "Ekhamukhi 24K gold facial serum has completely revived my skin. The pure herbal infusion with gold flakes and almond milk absorbs effortlessly without greasiness, fading stubborn sun tanning and bringing back a natural youthful glow."
               </p>
               <div class="review-author-wrap">
-                <div class="review-author-initial">MN</div>
+                <div class="review-author-initial" style="background:#fef3c7; color:#92400e;">MN</div>
                 <div class="review-author-details">
-                  <h5>Meera Nambiar</h5>
-                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Pune</span>
+                  <h5>Meera Nair</h5>
+                  <span><span class="review-verified-badge">✓ Verified Buyer</span> • Bengaluru</span>
                 </div>
               </div>
             </div>
@@ -3822,7 +3825,8 @@
             card.style.display = 'none';
           }
         } else {
-          if (cat === filterVal) {
+          const categories = cat.split(/\s+/);
+          if (categories.includes(filterVal)) {
             card.style.display = 'flex';
           } else {
             card.style.display = 'none';
