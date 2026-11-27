@@ -537,6 +537,116 @@
       }
     }
 
+  
+    /* Founder Bio Section Below Products */
+    .founder-bio-section {
+      background: #faf8f5;
+      padding: 56px 0;
+      border-top: 1px solid #ede8e1;
+      border-bottom: 1px solid #ede8e1;
+    }
+
+    .founder-bio-card {
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(27, 77, 62, 0.06);
+      padding: 38px 44px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      align-items: center;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .founder-bio-card {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
+        text-align: center;
+        gap: 20px;
+      }
+    }
+
+    .founder-photo-wrap {
+      position: relative;
+      text-align: center;
+    }
+
+    .founder-photo {
+      width: 195px;
+      height: 195px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 4px solid #ffffff;
+      box-shadow: 0 8px 24px rgba(27, 77, 62, 0.15);
+      background: #e8f0ec;
+      display: inline-block;
+    }
+
+    .founder-exp-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 12px;
+      background: var(--brand-forest, #1b4d3e);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      white-space: nowrap;
+    }
+
+    .founder-content-wrap .founder-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--brand-terracotta, #c06c52);
+      margin-bottom: 8px;
+    }
+
+    .founder-content-wrap h3 {
+      font-family: var(--font-heading, 'Playfair Display', serif);
+      letter-spacing: -0.01em;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--brand-forest, #1b4d3e);
+      margin: 0 0 12px 0;
+      line-height: 1.3;
+    }
+
+    .founder-bio-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #4a453e;
+      margin-bottom: 12px;
+    }
+
+    .founder-action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--brand-terracotta, #c06c52);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-top: 4px;
+    }
+
+    .founder-action-link:hover {
+      color: var(--brand-forest, #1b4d3e);
+      transform: translateX(4px);
+    }
+
   </style>
 </head>
 <body>
@@ -1696,6 +1806,39 @@ Each 10 ml contains:
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE VISION BEHIND HEALING HASTHA (DR. B. MASTHAN YADAV) ================= -->
+  <section class="founder-bio-section" id="founder-story">
+    <div class="hh-container">
+      <div class="founder-bio-card">
+        
+        <!-- Doctor Portrait -->
+        <div class="founder-photo-wrap">
+          <img src="doctor-headshot.png" alt="Dr. B. Masthan Yadav - Naturopathy Physician & Herbal Researcher" class="founder-photo" width="195" height="195" loading="lazy">
+          <span class="founder-exp-badge">30+ Yrs Clinical Heritage</span>
+        </div>
+
+        <!-- Bio & Story Link -->
+        <div class="founder-content-wrap">
+          <span class="founder-eyebrow">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            CLINICAL EXPERIENCE &amp; AYURVEDIC FORMULATION
+          </span>
+          <h3>The Vision Behind Healing Hastha: Dr. B. Masthan Yadav</h3>
+          <p class="founder-bio-text">
+            Healing Hastha's formulations are guided by the experience and knowledge of Dr. B. Masthan Yadav, a Naturopathy Physician and Herbal Researcher with over 30 years of clinical experience.
+          </p>
+          <p class="founder-bio-text" style="margin-top: -4px;">
+            Drawing on his understanding of traditional Ayurvedic practices, herbal ingredients and classical formulations, he focuses on developing products that bring traditional wellness approaches into convenient everyday routines.
+          </p>
+          <a href="our-story.html" class="founder-action-link">
+            <span>Explore the Story Behind Healing Hastha &rarr;</span>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
