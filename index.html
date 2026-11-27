@@ -174,44 +174,66 @@
       border-color: #cbd5e1;
     }
     .card-media-box {
-      background: #f8fafc;
-      padding: 18px 18px 12px 18px;
+      background: #ffffff;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       position: relative;
       border-bottom: 1px solid #f1f5f9;
+      overflow: hidden;
     }
     .card-media-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 220px;
+      display: block;
       width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #fbfbf8;
     }
     .card-media-link img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       transition: transform 0.3s ease;
     }
     .product-card:hover .card-media-link img {
-      transform: scale(1.04);
+      transform: scale(1.05);
+    }
+    .card-mini-gallery-strip {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px 8px 10px !important;
+      background: #ffffff;
+      border-top: 1px solid #f8fafc;
+    }
+    .card-mini-thumb {
+      width: 28px !important;
+      height: 28px !important;
+      padding: 1px !important;
+      border-radius: 5px !important;
+      flex-shrink: 0;
     }
     .card-body {
-      padding: 20px;
+      padding: 16px 18px 18px 18px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
     .product-title {
-      font-size: 18px;
+      font-size: 17.5px;
       font-weight: 700;
       color: var(--brand-forest, #1b4d3e);
       margin: 4px 0 6px 0;
-      line-height: 1.35;
+      line-height: 1.3;
       font-family: var(--font-display, serif);
+      min-height: 46px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     .product-title a {
       color: inherit;
@@ -222,75 +244,214 @@
       color: var(--brand-terracotta, #c86d51);
     }
     .product-tagline {
-      font-size: 13px;
+      font-size: 12.5px;
       color: #64748b;
       line-height: 1.5;
-      margin: 0 0 14px 0;
+      margin: 0 0 12px 0;
       flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      height: 56.5px;
+      max-height: 56.5px;
     }
     .price-row {
       display: flex;
       align-items: baseline;
-      gap: 8px;
-      margin-bottom: 14px;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 10px;
+      min-height: 28px;
     }
     .current-price {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
       color: var(--brand-forest, #1b4d3e);
     }
     .taxes-note {
-      font-size: 12px;
-      color: #94a3b8;
+      font-size: 11px;
+      color: #78716c;
+      white-space: nowrap;
     }
     .card-actions-hub {
       margin-top: auto;
     }
     .card-action-buttons {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .btn-view-product {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 9px 12px;
+      gap: 4px;
+      padding: 0 8px;
+      height: 38px;
       border-radius: 10px;
       background: #ffffff;
       border: 1.5px solid #cbd5e1;
       color: #334155;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.2s ease;
+      white-space: nowrap;
+      box-sizing: border-box;
     }
     .btn-view-product:hover {
       border-color: var(--brand-forest, #1b4d3e);
       color: var(--brand-forest, #1b4d3e);
       background: #f8fafc;
     }
+    .btn-add-cart-primary,
     .btn-card-add-cart {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 9px 14px;
+      gap: 5px;
+      padding: 0 8px;
+      height: 38px;
       border-radius: 10px;
-      background: var(--brand-terracotta, #e27d60);
+      background: var(--brand-terracotta, #c06c52);
       border: none;
       color: #ffffff;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
-      box-shadow: 0 3px 10px rgba(226, 125, 96, 0.25);
+      box-shadow: 0 3px 10px rgba(192, 108, 82, 0.25);
+      white-space: nowrap;
+      text-decoration: none;
+      box-sizing: border-box;
     }
+    .btn-add-cart-primary:hover,
     .btn-card-add-cart:hover {
-      background: #d46546;
+      background: var(--brand-terracotta-dark, #a8543b);
       transform: translateY(-1px);
-      box-shadow: 0 5px 14px rgba(226, 125, 96, 0.35);
+      box-shadow: 0 5px 14px rgba(192, 108, 82, 0.35);
+    }
+    .btn-add-cart-primary.in-cart {
+      background: var(--brand-forest, #1b4d3e);
+      color: #ffffff;
+    }
+    
+    /* Retailer Channel Strip */
+    .retail-channels-box {
+      background: #fafaf9;
+      border: 1px solid #e7e5e4;
+      border-radius: 10px;
+      padding: 7px 10px;
+      margin-top: 4px;
+      min-height: 54px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .retail-channels-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      gap: 4px;
+    }
+    .retail-channels-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #57534e;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .btn-where-to-buy-link {
+      font-size: 10.5px;
+      color: var(--brand-terracotta, #c06c52);
+      font-weight: 700;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      white-space: nowrap;
+    }
+    .retail-buttons-group {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      width: 100%;
+    }
+    .btn-retailer-chip {
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      height: 26px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .btn-retailer-chip.apollo span.chip-brand-name,
+    .btn-retailer-chip.medplus span.chip-brand-name,
+    .btn-retailer-chip.amazon span.chip-brand-name {
+      display: none;
+    }
+    .btn-retailer-chip img.chip-logo {
+      height: 15px;
+      width: auto;
+      max-width: 58px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+    .btn-retailer-chip.apollo {
+      background: #e6f6f4;
+      color: #0f3a30;
+      border-color: #99f6e4;
+    }
+    .btn-retailer-chip.apollo:hover {
+      background: #027668;
+      color: #ffffff;
+      border-color: #027668;
+    }
+    .btn-retailer-chip.medplus {
+      background: #fde8e8;
+      color: #881337;
+      border-color: #fecaca;
+    }
+    .btn-retailer-chip.medplus:hover {
+      background: #e53935;
+      color: #ffffff;
+      border-color: #e53935;
+    }
+    .btn-retailer-chip.amazon {
+      background: #fffbeb;
+      color: #78350f;
+      border-color: #fde68a;
+    }
+    .btn-retailer-chip.amazon:hover {
+      background: #111827;
+      color: #fbbf24;
+      border-color: #111827;
+    }
+    .btn-retailer-chip.direct-only {
+      background: #f0fdf4;
+      color: #166534;
+      border-color: #bbf7d0;
+      width: 100%;
     }
     .delivery-options-trigger {
       font-size: 11.5px;
@@ -1548,8 +1709,8 @@ Each 10 ml contains:
               </div>
               <div class="retail-channels-box">
                 <div class="retail-channels-header">
-                  <span class="retail-channels-title">Also Available At:</span>
-                  <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(2305)">Delivery Options ▾</button>
+                  <span class="retail-channels-title">Available At:</span>
+                  <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(2305)">Delivery ▾</button>
                 </div>
                 <div class="retail-buttons-group">
                   <a href="https://www.amazon.in/dp/B0HMWXMLBF" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip amazon" title="Buy on Amazon" aria-label="Buy on Amazon">
@@ -1608,8 +1769,8 @@ Each 10 ml contains:
               </div>
               <div class="retail-channels-box">
                 <div class="retail-channels-header">
-                  <span class="retail-channels-title">Available in Stores &amp; Online:</span>
-                  <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(736)">Options ▾</button>
+                  <span class="retail-channels-title">Available At:</span>
+                  <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(736)">Delivery ▾</button>
                 </div>
                 <div class="retail-buttons-group">
                   <a href="https://www.medplusmart.com/product/relx-oil-roll-on-8ml_relx0001" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip medplus" title="Buy on MedPlus Mart" aria-label="Buy on MedPlus Mart">
@@ -1661,7 +1822,7 @@ Each 10 ml contains:
             </p>
             <div class="price-row">
               <span class="current-price">₹199</span>
-              <span class="taxes-note">50g Pain Relief Balm • Free Delivery on ₹500+</span>
+              <span class="taxes-note">50g Balm • Free Delivery on ₹500+</span>
             </div>
             <div class="card-actions-hub">
               <div class="card-action-buttons">
@@ -1676,8 +1837,8 @@ Each 10 ml contains:
               </div>
               <div class="retail-channels-box">
                 <div class="retail-channels-header">
-                  <span class="retail-channels-title">Pharmacy Availability:</span>
-                  <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(2267)">Details ▾</button>
+                  <span class="retail-channels-title">Available At:</span>
+                  <button type="button" class="btn-where-to-buy-link" onclick="openWhereToBuy(2267)">Delivery ▾</button>
                 </div>
                 <div class="retail-buttons-group">
                   <a href="https://www.apollopharmacy.in/otc/sleep-8-pain-relief-balm-50g" target="_blank" rel="noopener noreferrer" class="btn-retailer-chip apollo" title="Buy on Apollo Pharmacy" aria-label="Buy on Apollo Pharmacy">
@@ -1737,6 +1898,15 @@ Each 10 ml contains:
                   <span>Add to Cart</span>
                 </button>
               </div>
+              <div class="retail-channels-box">
+                <div class="retail-channels-header">
+                  <span class="retail-channels-title">Available At:</span>
+                  <span style="font-size:10.5px; font-weight:700; color:var(--brand-forest, #1b4d3e); white-space:nowrap;">Direct Dispatch</span>
+                </div>
+                <div class="retail-buttons-group">
+                  <span class="btn-retailer-chip direct-only">🚚 100% Authentic • Direct Delivery</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1785,6 +1955,15 @@ Each 10 ml contains:
                   <span>Add to Cart</span>
                 </button>
               </div>
+              <div class="retail-channels-box">
+                <div class="retail-channels-header">
+                  <span class="retail-channels-title">Available At:</span>
+                  <span style="font-size:10.5px; font-weight:700; color:var(--brand-forest, #1b4d3e); white-space:nowrap;">Direct Dispatch</span>
+                </div>
+                <div class="retail-buttons-group">
+                  <span class="btn-retailer-chip direct-only">🚚 100% Authentic • Direct Delivery</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1819,7 +1998,7 @@ Each 10 ml contains:
             </p>
             <div class="price-row">
               <span class="current-price">₹499</span>
-              <span class="taxes-note">60 Capsules • Free Delivery on ₹500+</span>
+              <span class="taxes-note">60 Caps • Free Delivery on ₹500+</span>
             </div>
             <div class="card-actions-hub">
               <div class="card-action-buttons">
@@ -1831,6 +2010,15 @@ Each 10 ml contains:
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                   <span>Add to Cart</span>
                 </button>
+              </div>
+              <div class="retail-channels-box">
+                <div class="retail-channels-header">
+                  <span class="retail-channels-title">Available At:</span>
+                  <span style="font-size:10.5px; font-weight:700; color:var(--brand-forest, #1b4d3e); white-space:nowrap;">Direct Dispatch</span>
+                </div>
+                <div class="retail-buttons-group">
+                  <span class="btn-retailer-chip direct-only">🚚 100% Authentic • Direct Delivery</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1878,6 +2066,15 @@ Each 10 ml contains:
                   <span>Add to Cart</span>
                 </button>
               </div>
+              <div class="retail-channels-box">
+                <div class="retail-channels-header">
+                  <span class="retail-channels-title">Available At:</span>
+                  <span style="font-size:10.5px; font-weight:700; color:var(--brand-forest, #1b4d3e); white-space:nowrap;">Direct Dispatch</span>
+                </div>
+                <div class="retail-buttons-group">
+                  <span class="btn-retailer-chip direct-only">🚚 100% Authentic • Direct Delivery</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1892,7 +2089,7 @@ Each 10 ml contains:
               <div style="display:flex; gap:6px;">
                 <button type="button" class="card-mini-thumb" onclick="switchCardImage(1107, 'https://healinghastha.com/wp-content/uploads/2021/04/WhatsApp-Image-2025-06-06-at-17.17.23_171c8683.jpg', this)" onmouseenter="switchCardImage(1107, 'https://healinghastha.com/wp-content/uploads/2021/04/WhatsApp-Image-2025-06-06-at-17.17.23_171c8683.jpg', this)" title="Neem & Tulsi" style="width:34px; height:34px; padding:2px; border-radius:6px; border:1.5px solid var(--brand-terracotta, #c86d51); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.15s;"><img src="https://healinghastha.com/wp-content/uploads/2021/04/WhatsApp-Image-2025-06-06-at-17.17.23_171c8683.jpg" alt="Neem & Tulsi" style="max-width:100%; max-height:100%; object-fit:contain;" loading="lazy"></button>
               </div>
-              <a href="product-u-clean.html#tab-gallery" style="font-size:11px; font-weight:800; color:var(--brand-forest); text-decoration:none; background:#f1f5f9; padding:2px 8px; border-radius:12px; white-space:nowrap;" title="View all 1 authentic photos">📷 1 Photos</a>
+              <a href="product-u-clean.html#tab-gallery" style="font-size:11px; font-weight:800; color:var(--brand-forest); text-decoration:none; background:#f1f5f9; padding:2px 8px; border-radius:12px; white-space:nowrap;" title="View authentic photo">📷 1 Photo</a>
             </div>
           </div>
           <div class="card-body">
@@ -1922,6 +2119,15 @@ Each 10 ml contains:
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                   <span>Add to Cart</span>
                 </button>
+              </div>
+              <div class="retail-channels-box">
+                <div class="retail-channels-header">
+                  <span class="retail-channels-title">Available At:</span>
+                  <span style="font-size:10.5px; font-weight:700; color:var(--brand-forest, #1b4d3e); white-space:nowrap;">Direct Dispatch</span>
+                </div>
+                <div class="retail-buttons-group">
+                  <span class="btn-retailer-chip direct-only">🚚 100% Authentic • Direct Delivery</span>
+                </div>
               </div>
             </div>
           </div>
