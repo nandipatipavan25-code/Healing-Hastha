@@ -170,6 +170,58 @@
       visibility: visible !important;
     }
 
+    /* Header Navigation Desktop Pill Bar & Active Pill Style */
+    .header__nav-desktop {
+      display: none;
+    }
+    @media (min-width: 992px) {
+      .header__nav-desktop {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        background: #f1ede7 !important;
+        padding: 5px 8px !important;
+        border-radius: 9999px !important;
+        border: 1px solid rgba(27, 77, 62, 0.1) !important;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+      }
+      .header__nav-desktop .nav-link-custom {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 7px 18px !important;
+        border-radius: 9999px !important;
+        font-size: 13.5px !important;
+        font-weight: 600 !important;
+        color: #4b5563 !important;
+        text-decoration: none !important;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        position: relative !important;
+        line-height: 1.2 !important;
+      }
+      .header__nav-desktop .nav-link-custom::after {
+        display: none !important; /* Replaced underline with active pill capsule */
+      }
+      .header__nav-desktop .nav-link-custom:hover:not(.active) {
+        color: var(--brand-forest, #1B4D3E) !important;
+        background: rgba(27, 77, 62, 0.08) !important;
+      }
+      .header__nav-desktop .nav-link-custom.active {
+        background: var(--brand-forest, #1B4D3E) !important;
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        box-shadow: 0 2px 10px rgba(27, 77, 62, 0.28) !important;
+      }
+    }
+
+    .mobile-nav-item.active {
+      background: var(--brand-forest, #1b4d3e) !important;
+      color: #ffffff !important;
+      border-radius: 9999px !important;
+      font-weight: 700 !important;
+      padding: 10px 18px !important;
+    }
+
     /* Catalog Section Custom Controls & Card Styles */
     .catalog-controls-section {
       background: #faf8f5;
@@ -200,26 +252,50 @@
       font-size: 13.5px;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .filter-pill:hover {
+    .filter-pill:hover:not(.active) {
       border-color: var(--brand-forest, #1b4d3e);
       color: var(--brand-forest, #1b4d3e);
+      background: #f8faf8;
+      transform: translateY(-1px);
     }
     .filter-pill.active {
-      background: var(--brand-forest, #1b4d3e);
-      border-color: var(--brand-forest, #1b4d3e);
-      color: #ffffff;
+      background: var(--brand-forest, #1b4d3e) !important;
+      border-color: var(--brand-forest, #1b4d3e) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(27, 77, 62, 0.25) !important;
+      transform: translateY(-1px);
     }
     .filter-pill .pill-count {
       font-size: 11px;
       padding: 1px 6px;
       border-radius: 10px;
       background: rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
     }
     .filter-pill.active .pill-count {
       background: rgba(255, 255, 255, 0.25);
       color: #ffffff;
+    }
+    .condition-quick-pill {
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+    .condition-quick-pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .condition-quick-pill.active {
+      background: var(--brand-forest, #1b4d3e) !important;
+      color: #ffffff !important;
+      border-color: var(--brand-forest, #1b4d3e) !important;
+      box-shadow: 0 2px 10px rgba(27, 77, 62, 0.25) !important;
+      transform: translateY(-1px);
     }
     .search-input-wrap {
       position: relative;
@@ -1721,17 +1797,17 @@
           <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" class="search-input" id="catalogSearch" placeholder="Search remedy, oil, or condition...">
         </div>
-              <!-- Quick Problem-Solving Condition Filter Strip -->
+        <!-- Quick Problem-Solving Condition Filter Strip -->
         <div class="symptom-quick-strip" style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:14px; padding-top:14px; border-top:1px dashed #e2e8f0;">
           <span style="font-size:12px; font-weight:800; color:#1c1917; text-transform:uppercase; letter-spacing:0.04em;">What does your body need?</span>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('pain', 'Joint & Knee Pain')" style="cursor:pointer; background:#f0fdf4; color:#1b4d3e; border:1px solid #bbf7d0; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">🦵 Joint &amp; Knee Pain</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('sleep', 'Headache & Snoring')" style="cursor:pointer; background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">⚡ Headache &amp; Snoring</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('sleep', 'Neck & Shoulder Discomfort')" style="cursor:pointer; background:#fef3c7; color:#92400e; border:1px solid #fde68a; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">💆 Neck &amp; Shoulder Discomfort</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('skin', 'Hair Fall & Dandruff')" style="cursor:pointer; background:#f0fdf4; color:#1b4d3e; border:1px solid #bbf7d0; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">🌱 Hair Fall &amp; Dandruff</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('wellness', 'Fatigue & Low Stamina')" style="cursor:pointer; background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">⚡ Fatigue &amp; Low Stamina</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('wellness', 'Metabolism & Bloating')" style="cursor:pointer; background:#fef3c7; color:#92400e; border:1px solid #fde68a; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">🔥 Metabolism &amp; Bloating</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('skin', 'Sun Tanning & Dullness')" style="cursor:pointer; background:#fdf2f8; color:#9d174d; border:1px solid #fbcfe8; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">✨ Sun Tanning &amp; Facial Glow</button>
-          <button type="button" class="condition-quick-pill" onclick="filterByCondition('wellness', 'Hand Sanitizing')" style="cursor:pointer; background:#f0fdf4; color:#1b4d3e; border:1px solid #bbf7d0; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; transition:all 0.2s;">🦠 99.9% Antiseptic Defense</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('pain', 'Joint & Knee Pain', this)" style="background:#f0fdf4; color:#1b4d3e; border:1px solid #bbf7d0;">🦵 Joint &amp; Knee Pain</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('sleep', 'Headache & Snoring', this)" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe;">⚡ Headache &amp; Snoring</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('sleep', 'Neck & Shoulder Discomfort', this)" style="background:#fef3c7; color:#92400e; border:1px solid #fde68a;">💆 Neck &amp; Shoulder Discomfort</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('skin', 'Hair Fall & Dandruff', this)" style="background:#f0fdf4; color:#1b4d3e; border:1px solid #bbf7d0;">🌱 Hair Fall &amp; Dandruff</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('wellness', 'Fatigue & Low Stamina', this)" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe;">⚡ Fatigue &amp; Low Stamina</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('wellness', 'Metabolism & Bloating', this)" style="background:#fef3c7; color:#92400e; border:1px solid #fde68a;">🔥 Metabolism &amp; Bloating</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('skin', 'Sun Tanning & Dullness', this)" style="background:#fdf2f8; color:#9d174d; border:1px solid #fbcfe8;">✨ Sun Tanning &amp; Facial Glow</button>
+          <button type="button" class="condition-quick-pill" onclick="filterByCondition('wellness', 'Hand Sanitizing', this)" style="background:#f0fdf4; color:#1b4d3e; border:1px solid #bbf7d0;">🦠 99.9% Antiseptic Defense</button>
         </div>
       </div>
     </div>
@@ -4098,6 +4174,7 @@
 
     // Category & Retailer Filters
     const filterButtons = document.querySelectorAll('.filter-pill');
+    const conditionPills = document.querySelectorAll('.condition-quick-pill');
     const productCards = document.querySelectorAll('.product-card');
 
     function setFilter(filterVal) {
@@ -4132,8 +4209,19 @@
       });
     }
 
+    window.filterByCondition = function(cat, label, btnElement) {
+      conditionPills.forEach(p => p.classList.remove('active'));
+      if (btnElement) {
+        btnElement.classList.add('active');
+      }
+      setFilter(cat);
+      const searchInput = document.getElementById('catalogSearch');
+      if (searchInput) searchInput.value = '';
+    };
+
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
+        conditionPills.forEach(p => p.classList.remove('active'));
         const f = btn.getAttribute('data-filter');
         setFilter(f);
       });
