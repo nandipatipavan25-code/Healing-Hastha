@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Herbal Products | Healing Hastha - Authentic Ayurvedic Formulations</title>
+  <meta name="description" content="Discover our range of 100% natural Ayurvedic products, formulated by Dr. Masthan Yadav with 30+ years of clinical experience. Pain relief oils, wellness teas, balms and herbal care.">
+
+  <!-- Google Fonts: Playfair Display & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Live Theme CSS -->
+  <link rel="stylesheet" href="live-style.css">
+
+  <style>
+    :root {
+      --brand-forest: #1b4d3e;
+      --brand-forest-dark: #0f3329;
+      --brand-forest-light: #e8f0ec;
+      --brand-terracotta: #c06c52;
+      --brand-terracotta-dark: #a8563d;
+      --brand-cream: #fdfaf6;
+      --brand-cream-card: #f9f5ef;
+      --brand-mint: #e8f5f0;
+      --brand-peach: #fdf0eb;
+      --brand-lavender: #f0eef8;
+      
+      --text-main: #23201d;
+      --text-body: #475569;
+      --text-muted: #64748b;
+      --border-subtle: #ebdcd0;
+      --border-light: #e2e8f0;
+
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --shadow-soft: 0 4px 20px rgba(0,0,0,0.04);
+      --shadow-hover: 0 10px 30px rgba(27,77,62,0.08);
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-main);
+      background-color: var(--brand-cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Universal Container */
+    .hh-container {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    /* Top Announcement Bar */
+    .announcement-bar {
+      background: var(--brand-forest-dark);
+      color: #e2e8f0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 8px 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .announcement-bar span {
+      color: #fed7aa;
+    }
+
+    /* Header Navigation */
+    .header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #e8e3dc;
+      padding: 0 24px;
+      transition: all 0.3s ease;
+    }
+    .header__container {
+      max-width: 1300px;
+      margin: 0 auto;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .header__mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--brand-forest);
+      cursor: pointer;
+      padding: 8px;
+    }
+    .header__logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .header__logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header__nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Active Bar Pill Style */
+    .nav-link-custom {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #334155;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-block;
+      line-height: 1.4;
+      position: relative;
+    }
+    .nav-link-custom:hover:not(.active) {
+      color: var(--brand-forest);
+      background-color: #f1f5f3;
+      transform: translateY(-1px);
+    }
+    .nav-link-custom.active {
+      background-color: var(--brand-forest) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 14px rgba(27, 77, 62, 0.28) !important;
+      transform: translateY(-1px);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header__cart-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #f4efe9;
+      color: var(--brand-forest);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .header__cart-btn:hover {
+      background: var(--brand-forest);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .header__cart-badge {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: var(--brand-terracotta);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    /* Mobile Nav Drawer */
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .mobile-nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      background: #ffffff;
+      z-index: 1200;
+      transform: translateX(-100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 0 25px rgba(0,0,0,0.15);
+    }
+    .mobile-nav-drawer.active {
+      transform: translateX(0);
+    }
+    .mobile-nav-header {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0ede8;
+    }
+    .mobile-nav-links {
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .mobile-nav-item {
+      display: block;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #334155;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+    .mobile-nav-item:hover {
+      background: #f8faf8;
+      color: var(--brand-forest);
+    }
+    .mobile-nav-item.active {
+      background: var(--brand-forest) !important;
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+
+    /* Products Page Content */
+    .products-page {
+      padding-top: 0;
+      padding-bottom: 80px;
+      background-color: var(--brand-cream);
+      min-height: 100vh;
+    }
+
+    /* Banner */
+    .products-page__banner {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 40px;
+      background: #eae2d8;
+    }
+    .products-page__banner img {
+      width: 100%;
+      max-height: 440px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .products-page__container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Page Header */
+    .products-page__header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .products-page__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--brand-terracotta);
+      margin-bottom: 10px;
+    }
+    .products-page__title {
+      font-family: var(--font-heading);
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .products-page__description {
+      color: #64748b;
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Category Filter Pills */
+    .products-page__filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 44px;
+    }
+    .filter-btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      border: 1px solid #dcd7cf;
+      background: #ffffff;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .filter-btn-pill:hover:not(.active) {
+      border-color: var(--brand-forest);
+      color: var(--brand-forest);
+      background: #f8faf8;
+      transform: translateY(-1px);
+    }
+    .filter-btn-pill.active {
+      background: var(--brand-forest) !important;
+      border-color: var(--brand-forest) !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(27, 77, 62, 0.28) !important;
+      transform: translateY(-1px);
+    }
+    .filter-btn-pill .pill-badge {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+    .filter-btn-pill.active .pill-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* Product Grid Layout */
+    .products-grid-catalog {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 1200px) {
+      .products-grid-catalog {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+    @media (max-width: 860px) {
+      .products-grid-catalog {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+    @media (max-width: 580px) {
+      .products-grid-catalog {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* Product Card */
+    .catalog-product-card {
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #ede8e1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .catalog-product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(27, 77, 62, 0.1);
+      border-color: var(--brand-forest);
+    }
+
+    /* Badges */
+    .card-top-badges {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .badge-category {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--brand-forest);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border: 1px solid #ede8e1;
+    }
+    .badge-save {
+      background: var(--brand-terracotta);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(192, 108, 82, 0.3);
+    }
+
+    /* Media Box */
+    .card-media {
+      background: #fbf9f6;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      padding: 16px;
+      position: relative;
+    }
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.35s ease;
+    }
+    .catalog-product-card:hover .card-media img {
+      transform: scale(1.06);
+    }
+
+    /* Card Details */
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .card-stars {
+      display: inline-flex;
+      color: var(--brand-terracotta);
+    }
+    .card-stars svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--brand-terracotta);
+    }
+    .card-reviews-count {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #64748b;
+    }
+
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      line-height: 1.35;
+      margin-bottom: 8px;
+      min-height: 48px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .card-title a:hover {
+      color: var(--brand-terracotta);
+    }
+
+    .card-desc {
+      font-size: 12.5px;
+      color: #64748b;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 38px;
+    }
+
+    .card-pricing-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: auto;
+      margin-bottom: 16px;
+      padding-top: 10px;
+      border-top: 1px dashed #e8e3dc;
+    }
+    .card-price-current {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--brand-forest);
+    }
+    .card-price-original {
+      font-size: 14px;
+      color: #94a3b8;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+    .card-delivery-note {
+      font-size: 11px;
+      color: #166534;
+      margin-left: auto;
+      font-weight: 600;
+    }
+
+    /* Card Action Buttons */
+    .card-buttons-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .btn-card-view {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      border-radius: 9px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      background: #f4efe9;
+      border: 1px solid #ebdcd0;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-card-view:hover {
+      background: #ebe4dc;
+      color: var(--brand-forest-dark);
+      transform: translateY(-1px);
+    }
+    .btn-card-add {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      border-radius: 9px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--brand-forest);
+      border: 1px solid var(--brand-forest);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(27, 77, 62, 0.2);
+    }
+    .btn-card-add:hover {
+      background: var(--brand-forest-dark);
+      border-color: var(--brand-forest-dark);
+      transform: translateY(-1px);
+    }
+    .btn-card-add.in-cart {
+      background: #166534;
+      border-color: #166534;
+    }
+
+    /* Help Section CTA */
+    .help-cta-box {
+      background: linear-gradient(135deg, #f7f3ee 0%, #ffffff 100%);
+      border-radius: 20px;
+      border: 1px solid #ede8e1;
+      padding: 44px 32px;
+      text-align: center;
+      margin-top: 20px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.03);
+    }
+    .help-cta-box h3 {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      color: var(--brand-forest);
+      margin-bottom: 10px;
+    }
+    .help-cta-box p {
+      font-size: 15px;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+    }
+    .btn-help-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 9999px;
+      background: var(--brand-terracotta);
+      color: #ffffff;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(192, 108, 82, 0.3);
+    }
+    .btn-help-contact:hover {
+      background: var(--brand-terracotta-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Omnichannel Trust Ribbon */
+    .omnichannel-trust-ribbon {
+      background: #ffffff;
+      border: 1px solid #ebdcd0;
+      border-radius: 16px;
+      padding: 24px 32px;
+      margin: 60px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+    }
+    .trust-ribbon-text {
+      flex: 1 1 auto;
+      min-width: 280px;
+    }
+    .partner-logos-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+    }
+    .partner-logo-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      height: 48px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-sizing: border-box;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .partner-logo-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    .partner-logo-pill.apollo {
+      border-color: #bbf7d0;
+      background: #e6f6f4;
+    }
+    .partner-logo-pill.medplus {
+      border-color: #fecaca;
+      background: #fde8e8;
+    }
+    .partner-logo-pill.amazon {
+      border-color: #fde68a;
+      background: #fffbeb;
+    }
+    .filter-pill-icon {
+      height: 18px !important;
+      max-height: 18px !important;
+      max-width: 60px !important;
+      width: auto !important;
+      object-fit: contain !important;
+    }
+    @media (max-width: 992px) {
+      .omnichannel-trust-ribbon {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+      }
+      .partner-logos-row {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 680px) {
+      .partner-logos-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Cart Drawer Modal */
+    .cart-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 440px;
+      max-width: 92vw;
+      height: 100%;
+      background: #ffffff;
+      z-index: 2001;
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.18);
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .cart-drawer.active {
+      transform: translateX(0);
+    }
+    .cart-drawer-header {
+      background: var(--brand-forest);
+      color: #ffffff;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cart-drawer-header h3 {
+      color: #ffffff !important;
+      font-family: var(--font-heading) !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+    }
+    .cart-drawer-close {
+      background: none !important;
+      border: none !important;
+      color: #ffffff !important;
+      font-size: 28px !important;
+      cursor: pointer !important;
+      line-height: 1 !important;
+    }
+    .cart-free-shipping-bar {
+      background: #f0fdf4;
+      padding: 10px 24px;
+      border-bottom: 1px solid #dcfce7;
+      font-size: 12.5px;
+      color: #166534;
+    }
+    .free-shipping-progress {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 2px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+    .free-shipping-progress-fill {
+      height: 100%;
+      background: #16a34a;
+      transition: width 0.3s ease;
+    }
+    .cart-drawer-body {
+      padding: 20px 24px;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+    .cart-drawer-footer {
+      padding: 20px 24px;
+      background: #faf8f5;
+      border-top: 1px solid #ede8e1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1c1917;
+    }
+    .btn-checkout-direct {
+      display: block !important;
+      width: 100% !important;
+      padding: 14px 20px !important;
+      background: var(--brand-forest) !important;
+      color: #ffffff !important;
+      text-align: center !important;
+      font-weight: 700 !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      font-size: 15px !important;
+      transition: background 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(27, 77, 62, 0.25) !important;
+    }
+    .btn-checkout-direct:hover {
+      background: #14382d !important;
+      color: #ffffff !important;
+    }
+
+    /* Cart Item Card */
+    .cart-item-row {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0ede8;
+      align-items: center;
+    }
+    .cart-item-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: contain;
+      background: #fbf9f6;
+      border: 1px solid #ede8e1;
+    }
+    .cart-item-info {
+      flex-grow: 1;
+    }
+    .cart-item-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--brand-forest);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .cart-item-price {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--brand-terracotta);
+    }
+    .cart-item-remove {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .cart-item-remove:hover {
+      color: #ef4444;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #112820;
+      color: #e2e8f0;
+      padding: 60px 0 30px 0;
+      margin-top: 80px;
+    }
+    .footer-grid-exact {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+    .footer-col-exact h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links-list a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: color 0.2s;
+    }
+    .footer-links-list a:hover {
+      color: #fed7aa;
+    }
+    .footer-bottom-exact {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+      color: #64748b;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid-exact {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-grid-exact {
+        grid-template-columns: 1fr;
+      }
+      .header__nav-desktop {
+        display: none;
+      }
+      .header__mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🌿 100% Pure Ayurvedic Medicine • Backed by <strong>30+ Years</strong> of Clinical Healing • <span>FREE Delivery above ₹500</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="header">
+    <div class="header__container">
+      <!-- Mobile Menu Toggle Button -->
+      <button class="header__mobile-toggle" id="mobile-menu-open-btn" onclick="openMobileNav()" aria-label="Toggle Navigation Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="header__logo-link">
+        <img src="https://healinghastha.com/wp-content/uploads/2025/06/Healing-Hastha-logo.png" alt="Healing Hastha" class="header__logo-img" width="180" height="50" fetchpriority="high" decoding="async">
+      </a>
+
+      <!-- Desktop Navigation links -->
+      <nav class="header__nav-desktop">
+        <a href="index.html" class="nav-link-custom">Home</a>
+        <a href="our-products.html" class="nav-link-custom active">Products</a>
+        <a href="our-story.html" class="nav-link-custom">Our Story</a>
+        <a href="https://healinghastha.com/knowledge-hub" class="nav-link-custom">Knowledge Hub</a>
+        <a href="contact-us.html" class="nav-link-custom">Contact</a>
+      </nav>
+
+      <!-- Cart Button -->
+      <div class="header__actions">
+        <button type="button" class="header__cart-btn" onclick="openCart()" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span data-cart-badge class="header__cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-header">
+      <img src="https://healinghastha.com/wp-content/uploads/2025/06/Healing-Hastha-logo.png" alt="Healing Hastha" style="height: 38px;">
+      <button type="button" class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close Navigation" style="background:none; border:none; font-size:28px; cursor:pointer;">&times;</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-item">🏠 Home</a>
+      <a href="our-products.html" class="mobile-nav-item active">🌿 Our Herbal Products</a>
+      <a href="our-story.html" class="mobile-nav-item">🩺 Our Story (Dr. Masthan)</a>
+      <a href="https://healinghastha.com/knowledge-hub" class="mobile-nav-item">📖 Knowledge Hub</a>
+      <a href="contact-us.html" class="mobile-nav-item">📞 Contact Us</a>
+    </nav>
+  </aside>
+
+  <!-- Main Products Page Container -->
+  <main class="products-page">
+
+    <!-- Responsive Hero Banner (Desktop vs Mobile) -->
+    <div class="products-page__banner">
+      <picture>
+        <source media="(min-width: 768px)" srcset="https://healinghastha.com/wp-content/uploads/2026/09/Banner-scaled.webp">
+        <img 
+          src="https://healinghastha.com/wp-content/uploads/2026/09/Banner-4.webp" 
+          alt="Healing Hastha Herbal Products Banner" 
+          loading="eager"
+          fetchpriority="high"
+        />
+      </picture>
+    </div>
+
+    <div class="products-page__container">
+      
+      <!-- Page Header block -->
+      <div class="products-page__header">
+        <span class="products-page__eyebrow">🌿 Authentic Ayurvedic Wisdom</span>
+        <h1 class="products-page__title">Our Herbal Products</h1>
+        <p class="products-page__description">
+          Discover our range of 100% natural Ayurvedic products, formulated by Dr. Masthan Yadav with 30+ years of clinical experience.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills Bar -->
+      <div class="products-page__filters" id="categoryFilters">
+        <button type="button" class="filter-btn-pill active" data-filter="all">
+          <span>All Formulations</span>
+          <span class="pill-badge">8</span>
+        </button>
+        <button type="button" class="filter-btn-pill" data-filter="pain-relief">
+          <span>Pain & Joint Relief</span>
+          <span class="pill-badge">3</span>
+        </button>
+        <button type="button" class="filter-btn-pill" data-filter="vitality">
+          <span>Vitality & Wellness</span>
+          <span class="pill-badge">2</span>
+        </button>
+        <button type="button" class="filter-btn-pill" data-filter="hair-skin">
+          <span>Hair & Skincare</span>
+          <span class="pill-badge">2</span>
+        </button>
+        <button type="button" class="filter-btn-pill" data-filter="hygiene">
+          <span>Hygiene</span>
+          <span class="pill-badge">1</span>
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid-catalog" id="productsCatalogGrid">
+        
+        <!-- Product 1: Dr. MAYA Pain Relief Oil -->
+        <article class="catalog-product-card" data-category="pain-relief" data-id="2305">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+          </div>
+          <a href="product-dr-maya-pain-relief-oil.html" class="card-media" aria-label="View Dr. MAYA Pain Relief Oil">
+            <img src="https://healinghastha.com/wp-content/uploads/2026/09/Dr-maya-1-1024x1024.webp" alt="Dr. MAYA Pain Relief Oil" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-dr-maya-pain-relief-oil.html">Dr. MAYA Pain Relief Oil</a>
+            </h3>
+            <p class="card-desc">
+              An Ayurvedic herbal massage oil formulated to provide soothing relief from everyday back, neck, shoulder, knee and muscle aches. Its non-sticky, non-greasy formula makes application easy.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹599</span>
+              <span class="card-delivery-note">✓ Free Delivery</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-dr-maya-pain-relief-oil.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(2305, 'Dr. MAYA Pain Relief Oil', 599, 'https://healinghastha.com/wp-content/uploads/2026/09/Dr-maya-1-1024x1024.webp')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Relx Oil -->
+        <article class="catalog-product-card" data-category="pain-relief" data-id="736">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+          </div>
+          <a href="product-relx-oil.html" class="card-media" aria-label="View Relx Oil">
+            <img src="https://healinghastha.com/wp-content/uploads/2021/03/Healing-Hastha-Relx-Oil-12-1024x1024.webp" alt="Relx Oil" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-relx-oil.html">Relx Oil Roll-On</a>
+            </h3>
+            <p class="card-desc">
+              A convenient Ayurvedic roll-on featuring aromatic botanical oils. Designed for easy external application to support comfort during headaches and nasal congestion.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹99</span>
+              <span class="card-delivery-note">Roll-On • 8ml</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-relx-oil.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(736, 'Relx Oil', 99, 'https://healinghastha.com/wp-content/uploads/2021/03/Healing-Hastha-Relx-Oil-12-1024x1024.webp')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: Sleep 8 Pain Relief Balm -->
+        <article class="catalog-product-card" data-category="pain-relief" data-id="2267">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+          </div>
+          <a href="product-sleep-8.html" class="card-media" aria-label="View Sleep 8">
+            <img src="https://healinghastha.com/wp-content/uploads/2026/09/Sleep-8-2-1024x1024.webp" alt="Sleep 8" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-sleep-8.html">Sleep 8 Pain Relief Balm</a>
+            </h3>
+            <p class="card-desc">
+              A classical Ayurvedic balm formulated with aromatic oils for gentle massage on the temples and forehead. A soothing addition to your relaxation and bedtime routine.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹199</span>
+              <span class="card-delivery-note">Topical Balm • 50g</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-sleep-8.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(2267, 'Sleep 8', 199, 'https://healinghastha.com/wp-content/uploads/2026/09/Sleep-8-2-1024x1024.webp')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Tytus Slim Powder -->
+        <article class="catalog-product-card" data-category="vitality" data-id="738">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+            <span class="badge-save">Save 36%</span>
+          </div>
+          <a href="product-tytus-slim-powder.html" class="card-media" aria-label="View Tytus Slim Powder">
+            <img src="https://healinghastha.com/wp-content/uploads/2021/03/Slim_Powder_Img-1024x1024.jpg" alt="Tytus Slim Powder" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-tytus-slim-powder.html">Tytus Slim Powder</a>
+            </h3>
+            <p class="card-desc">
+              An herbal green tea blend featuring Yashthimadhu, Shunthi, Dalchini, Vrukshamla, Amlaki and Haridra. A refreshing beverage to complement your weight management and wellness routine.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹750</span>
+              <span class="card-price-original">₹1,179</span>
+              <span class="card-delivery-note">✓ Free Delivery</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-tytus-slim-powder.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(738, 'Tytus Slim Powder', 750, 'https://healinghastha.com/wp-content/uploads/2021/03/Slim_Powder_Img-1024x1024.jpg')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5: U-Clean Herbal Hand Sanitizer -->
+        <article class="catalog-product-card" data-category="hygiene" data-id="1107">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+            <span class="badge-save">Save 38%</span>
+          </div>
+          <a href="product-u-clean.html" class="card-media" aria-label="View U-Clean Hand Sanitizer">
+            <img src="https://healinghastha.com/wp-content/uploads/2021/04/WhatsApp-Image-2025-06-06-at-17.17.23_171c8683-1024x1024.jpg" alt="U Clean - Herbal Hand Sanitizer" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-u-clean.html">U-Clean Herbal Hand Sanitizer</a>
+            </h3>
+            <p class="card-desc">
+              A 70% isopropyl alcohol-based hand sanitizer enriched with Aloe Vera, Tulasi, Neem and Turmeric extracts, along with Glycerine and Vitamin E for everyday hand hygiene.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹50</span>
+              <span class="card-price-original">₹80</span>
+              <span class="card-delivery-note">100ml Bottle</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-u-clean.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(1107, 'U Clean – Herbal Sanitizer', 50, 'https://healinghastha.com/wp-content/uploads/2021/04/WhatsApp-Image-2025-06-06-at-17.17.23_171c8683-1024x1024.jpg')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6: SIX E -->
+        <article class="catalog-product-card" data-category="vitality" data-id="1009">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+          </div>
+          <a href="product-six-e.html" class="card-media" aria-label="View SIX E">
+            <img src="https://healinghastha.com/wp-content/uploads/2021/03/Six_E_Img-2-1024x1024.jpg" alt="SIX E" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-six-e.html">SIX E Vitality Capsules</a>
+            </h3>
+            <p class="card-desc">
+              An Ayurvedic men's vitality formulation featuring Ashwagandha, Gokhru, Safed Musli, Vidarikhand, Shatavari, Kapikachhu, Shilajit and Akkarkarabha. Designed to complement men's wellness routines.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹499</span>
+              <span class="card-delivery-note">60 Veg Capsules</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-six-e.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(1009, 'SIX E', 499, 'https://healinghastha.com/wp-content/uploads/2021/03/Six_E_Img-2-1024x1024.jpg')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 7: Kaidarya Herbal Hair Oil -->
+        <article class="catalog-product-card" data-category="hair-skin" data-id="1144">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+          </div>
+          <a href="product-kaidarya-hair-oil.html" class="card-media" aria-label="View Kaidarya Herbal Hair Oil">
+            <img src="https://healinghastha.com/wp-content/uploads/2021/03/Kaidarya-Hair-Oil-Cover-image-1024x1024.webp" alt="Kaidarya Herbal Hair Oil" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-kaidarya-hair-oil.html">Kaidarya Herbal Hair Oil</a>
+            </h3>
+            <p class="card-desc">
+              A traditional Ayurvedic herbal hair oil formulated to nourish the scalp and hair, support hair care and maintain healthy-looking, naturally shiny hair.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹199</span>
+              <span class="card-delivery-note">100ml Bottle</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-kaidarya-hair-oil.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(1144, 'Kaidarya Herbal Hair Oil', 199, 'https://healinghastha.com/wp-content/uploads/2021/03/Kaidarya-Hair-Oil-Cover-image-1024x1024.webp')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 8: Ekhamukhi 24K Gold Serum Oil -->
+        <article class="catalog-product-card" data-category="hair-skin" data-id="737">
+          <div class="card-top-badges">
+            <span class="badge-category">Herbal Products</span>
+            <span class="badge-save">Save 38%</span>
+          </div>
+          <a href="product-ekhamukhi-oil.html" class="card-media" aria-label="View Ekhamukhi Oil">
+            <img src="https://healinghastha.com/wp-content/uploads/2021/03/WhatsApp-Image-2025-06-06-at-17.06.56_4d0cbf66-1024x1024.jpg" alt="Ekhamukhi 24K Gold Serum Oil" loading="lazy">
+          </a>
+          <div class="card-info">
+            <div class="card-rating-row">
+              <div class="card-stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="card-reviews-count">(5 Reviews)</span>
+            </div>
+            <h3 class="card-title">
+              <a href="product-ekhamukhi-oil.html">Ekhamukhi 24K Gold Serum Oil</a>
+            </h3>
+            <p class="card-desc">
+              Experience luxurious skincare with 24K gold flakes, almond milk, coconut milk and germ seed oil. This premium serum oil helps nourish the skin and enhance its natural-looking radiance and glow.
+            </p>
+            <div class="card-pricing-row">
+              <span class="card-price-current">₹4,999</span>
+              <span class="card-price-original">₹8,000</span>
+              <span class="card-delivery-note">✓ Free Delivery</span>
+            </div>
+            <div class="card-buttons-row">
+              <a href="product-ekhamukhi-oil.html" class="btn-card-view">
+                <span>View Details</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn-card-add" onclick="addToCart(737, 'Ekhamukhi Oil', 4999, 'https://healinghastha.com/wp-content/uploads/2021/03/WhatsApp-Image-2025-06-06-at-17.06.56_4d0cbf66-1024x1024.jpg')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Help Selection CTA Box -->
+      <section class="help-cta-box">
+        <h3>Need Help Choosing the Right Remedy?</h3>
+        <p>
+          Our Ayurvedic wellness team and Dr. Masthan Yadav's clinic are here to guide you to the perfect formulation for your unique health and lifestyle needs.
+        </p>
+        <a href="contact-us.html" class="btn-help-contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Contact Our Ayurvedic Experts</span>
+        </a>
+      </section>
+
+      <!-- Omnichannel Trust Ribbon -->
+      <div class="omnichannel-trust-ribbon">
+        <div class="trust-ribbon-text">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1b4d3e" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span style="font-weight:700; color:#1b4d3e; font-size:14.5px;">Trusted Nationwide Availability</span>
+          </div>
+          <p style="margin:0; font-size:13px; color:#64748b;">
+            Also available at leading pharmacies and official partner storefronts across India.
+          </p>
+        </div>
+        <div class="partner-logos-row">
+          <a href="https://www.apollopharmacy.in/search-medicines/healing%20hastha" target="_blank" rel="noopener" class="partner-logo-pill apollo" title="Apollo Pharmacy">
+            <img src="apollo_pharmacy_logo.png" alt="Apollo Pharmacy" class="filter-pill-icon">
+            <span style="font-size:12px; font-weight:700; color:#0e7490;">Apollo 24/7</span>
+          </a>
+          <a href="https://www.medplusmart.com" target="_blank" rel="noopener" class="partner-logo-pill medplus" title="MedPlus Mart">
+            <img src="medplus_logo.jpg" alt="MedPlus" class="filter-pill-icon">
+            <span style="font-size:12px; font-weight:700; color:#b91c1c;">MedPlus</span>
+          </a>
+          <a href="https://www.amazon.in" target="_blank" rel="noopener" class="partner-logo-pill amazon" title="Amazon India">
+            <img src="Amazon_logo.svg" alt="Amazon" class="filter-pill-icon">
+            <span style="font-size:12px; font-weight:700; color:#b45309;">Amazon</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Cart Drawer Overlay & Sidebar -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Remedies Shopping Basket">
+    <div class="cart-drawer-header">
+      <h3>Your Remedies Basket</h3>
+      <button type="button" class="cart-drawer-close" onclick="closeCart()" aria-label="Close basket">&times;</button>
+    </div>
+    <div class="cart-free-shipping-bar" id="cartFreeShippingBar">
+      <div id="freeShippingText">
+        <span>🚚 Orders above <strong>₹500</strong> get <strong>FREE Delivery</strong></span>
+      </div>
+      <div class="free-shipping-progress">
+        <div class="free-shipping-progress-fill" id="freeShippingFill" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerItems">
+      <!-- Populated via JavaScript -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal" style="font-weight: 800; color: var(--brand-forest); font-size: 20px;">₹0</span>
+      </div>
+      <p style="font-size: 11.5px; color: #64748b; margin: 0;">Taxes and shipping calculated at checkout. Free shipping on orders ₹500+.</p>
+      <a href="javascript:void(0)" onclick="alert('Proceeding to secure checkout...');" class="btn-checkout-direct">Proceed to Secure Checkout →</a>
+    </div>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="hh-container">
+      <div class="footer-grid-exact">
+        
+        <div class="footer-col-exact footer-brand-exact">
+          <a href="index.html">
+            <img src="https://healinghastha.com/wp-content/themes/flash-child/assets/Healing-Hastha-logo-White.png" alt="Healing Hastha" width="200" height="48">
+          </a>
+          <p style="margin-top: 14px; font-size: 13.5px; color: #cbd5e1; line-height: 1.6;">
+            Bringing you 23+ years of Ayurvedic wisdom in every bottle. Natural, clinically formulated, and trusted by thousands across India.
+          </p>
+        </div>
+
+        <div class="footer-col-exact">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-products.html">Our Products</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="https://healinghastha.com/knowledge-hub">Knowledge Hub</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-exact">
+          <h4>Top Formulations</h4>
+          <ul class="footer-links-list">
+            <li><a href="product-dr-maya-pain-relief-oil.html">Dr. MAYA Pain Relief</a></li>
+            <li><a href="product-relx-oil.html">Relx Roll-On</a></li>
+            <li><a href="product-sleep-8.html">Sleep 8 Balm</a></li>
+            <li><a href="product-tytus-slim-powder.html">Tytus Slim Tea</a></li>
+            <li><a href="product-ekhamukhi-oil.html">24K Gold Serum</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-exact">
+          <h4>Clinic & Support</h4>
+          <ul class="footer-links-list">
+            <li style="color: #cbd5e1; font-size: 13.5px;">📞 +91 94943 00800</li>
+            <li style="color: #cbd5e1; font-size: 13.5px;">✉️ support@healinghastha.com</li>
+            <li style="color: #cbd5e1; font-size: 13.5px;">📍 Hyderabad, Telangana, India</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-exact">
+        <div>&copy; 2026 Healing Hastha Herbals Pvt Ltd. All rights reserved.</div>
+        <div style="display:flex; gap: 16px;">
+          <a href="#" style="color:#94a3b8; text-decoration:none;">Privacy Policy</a>
+          <a href="#" style="color:#94a3b8; text-decoration:none;">Terms & Conditions</a>
+          <a href="#" style="color:#94a3b8; text-decoration:none;">Shipping & Returns</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Cart Data
+    let cart = [];
+    try {
+      const savedCart = localStorage.getItem('hh_cart');
+      if (savedCart) {
+        cart = JSON.parse(savedCart);
+      }
+    } catch(e) {
+      console.log('localStorage unavailable', e);
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem('hh_cart', JSON.stringify(cart));
+      } catch(e) {}
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      const countBadges = document.querySelectorAll('[data-cart-badge]');
+      countBadges.forEach(b => { b.textContent = totalCount; });
+
+      // Update card button states
+      const cards = document.querySelectorAll('.catalog-product-card');
+      cards.forEach(card => {
+        const idAttr = card.getAttribute('data-id');
+        if (!idAttr) return;
+        const cardId = parseInt(idAttr, 10);
+        const inCart = cart.some(item => item.id === cardId);
+        const btn = card.querySelector('.btn-card-add');
+        if (!btn) return;
+        if (inCart) {
+          btn.classList.add('in-cart');
+          btn.innerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>In Cart</span>
+          `;
+        } else {
+          btn.classList.remove('in-cart');
+          btn.innerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span>Add to Cart</span>
+          `;
+        }
+      });
+
+      const itemsContainer = document.getElementById('cartDrawerItems');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      const fillBar = document.getElementById('freeShippingFill');
+      const shippingText = document.getElementById('freeShippingText');
+      if (!itemsContainer || !subtotalEl) return;
+
+      if (cart.length === 0) {
+        itemsContainer.innerHTML = `
+          <div style="text-align: center; color: #94a3b8; padding: 50px 0;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 12px; display:block; opacity: 0.5;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <p style="font-size: 15px; font-weight: 600; color: #475569;">Your basket is empty</p>
+            <p style="font-size: 13px; margin-top: 4px;">Explore our 100% natural Ayurvedic remedies above.</p>
+          </div>
+        `;
+        subtotalEl.textContent = '₹0';
+        if (fillBar) fillBar.style.width = '0%';
+        if (shippingText) shippingText.innerHTML = '<span>🚚 Orders above <strong>₹500</strong> get <strong>FREE Delivery</strong></span>';
+        return;
+      }
+
+      let subtotal = 0;
+      let html = '';
+      cart.forEach(item => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        html += `
+          <div class="cart-item-row">
+            <img src="${item.img}" alt="${item.name}" class="cart-item-img">
+            <div class="cart-item-info">
+              <div class="cart-item-title">${item.name}</div>
+              <div class="cart-item-price">₹${item.price} × ${item.qty}</div>
+            </div>
+            <button type="button" class="cart-item-remove" onclick="removeFromCart(${item.id})" aria-label="Remove item">&times;</button>
+          </div>
+        `;
+      });
+      itemsContainer.innerHTML = html;
+      subtotalEl.textContent = '₹' + subtotal.toLocaleString('en-IN');
+
+      if (fillBar && shippingText) {
+        if (subtotal >= 500) {
+          fillBar.style.width = '100%';
+          fillBar.style.background = '#16a34a';
+          shippingText.innerHTML = '<span>🎉 <strong>You unlocked FREE Delivery!</strong></span>';
+        } else {
+          const pct = Math.min(100, Math.round((subtotal / 500) * 100));
+          fillBar.style.width = pct + '%';
+          fillBar.style.background = '#e27d60';
+          const needed = 500 - subtotal;
+          shippingText.innerHTML = `<span>Add <strong>₹${needed}</strong> more for <strong>FREE Delivery</strong></span>`;
+        }
+      }
+    }
+
+    function addToCart(id, name, price, img) {
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id, name, price, img, qty: 1 });
+      }
+      saveCart();
+      updateCartUI();
+      openCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+      updateCartUI();
+    }
+
+    function openCart() {
+      const drawer = document.getElementById('cartDrawer');
+      const overlay = document.getElementById('cartDrawerOverlay');
+      if (drawer && overlay) {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeCart() {
+      const drawer = document.getElementById('cartDrawer');
+      const overlay = document.getElementById('cartDrawerOverlay');
+      if (drawer && overlay) {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function openMobileNav() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      const overlay = document.getElementById('mobileNavOverlay');
+      if (drawer && overlay) {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileNav() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      const overlay = document.getElementById('mobileNavOverlay');
+      if (drawer && overlay) {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Category Filtering
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartUI();
+
+      const filterBtns = document.querySelectorAll('.filter-btn-pill');
+      const cards = document.querySelectorAll('.catalog-product-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filterVal = this.getAttribute('data-filter');
+          cards.forEach(card => {
+            if (filterVal === 'all') {
+              card.style.display = 'flex';
+            } else {
+              if (card.getAttribute('data-category') === filterVal) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+
+    window.openCart = openCart;
+    window.closeCart = closeCart;
+    window.addToCart = addToCart;
+    window.removeFromCart = removeFromCart;
+    window.openMobileNav = openMobileNav;
+    window.closeMobileNav = closeMobileNav;
+  </script>
+</body>
+</html>
